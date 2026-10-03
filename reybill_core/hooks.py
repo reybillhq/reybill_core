@@ -5,6 +5,12 @@ app_description = "Core branding and platform integration for ReyBill"
 app_email = "info@reybill.com"
 app_license = "mit"
 
+# Presentation only: keep standard records and navigation identifiers unchanged.
+extend_bootinfo = "reybill_core.boot.extend_bootinfo"
+page_js = {"desktop": "public/js/desktop_naming.js"}
+# v16 refreshes Navbar Settings after extend_bootinfo; adapt the final Desk context.
+update_website_context = "reybill_core.boot.update_desk_context"
+
 # Apps
 # ------------------
 
@@ -261,4 +267,3 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-

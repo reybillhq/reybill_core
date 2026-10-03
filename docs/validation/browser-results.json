@@ -1,0 +1,82 @@
+{
+  "Framework": "ReyBill Work",
+  "ERPNext Settings": "ReyBill Settings",
+  "ERPNext": {
+    "visible_icons": 0,
+    "display_mapping": "ReyBill"
+  },
+  "Frappe Framework": {
+    "visible_icons": 0,
+    "display_mapping": "ReyBill Framework"
+  },
+  "profile_menu": [
+    "Edit Profile",
+    "Toggle Theme",
+    "About ReyBill",
+    "ReyBill Support",
+    "Reset Desktop Layout",
+    "Logout"
+  ],
+  "about_dialog": "About\n\nOpen Source applications for the web.\n\nFrappe Framework Version\nfrappe: 16.36.1 (version-16)\nINSTALLED APPS\nReyBill\nerpnext: 16.37.0 (version-16)\nR\nReyBill Core\nreybill_core: 0.0.2 (develop)\n\u00a9 Frappe Technologies Pvt. Ltd. and contributors",
+  "support": {
+    "url": "https://reybill.com/",
+    "new_tab": true,
+    "external_request_intercepted": true
+  },
+  "theme": "Switch Theme\nFrappe Light\nTimeless Night\nAutomatic",
+  "edit_profile": "/desk/user/Administrator",
+  "framework_folder": "ReyBill Work",
+  "framework_navigation": "/desk/doctype",
+  "settings_navigation": "/desk/global-defaults/Global%20Defaults",
+  "help_boot_labels": [
+    "About ReyBill",
+    "Keyboard Shortcuts",
+    "System Health",
+    "ReyBill Support"
+  ],
+  "help_visible_labels": [
+    "Desktop",
+    "Workspaces",
+    "Website",
+    "Edit Sidebar",
+    "Display",
+    "Reload",
+    "Help",
+    "Logout",
+    "Global Settings",
+    "About ReyBill",
+    "Keyboard Shortcuts",
+    "System Health",
+    "ReyBill Support"
+  ],
+  "reset": "Native action dispatched and page reloaded; deletion endpoint intercepted to preserve layout",
+  "logout": "/login",
+  "login_title": "Login",
+  "login_text": "Sign In\n\nWelcome! Please sign in to continue.\n\nEmail\nPassword\n\nForgot password?\n\nContinue\nLogin with Email Link",
+  "login_images": [
+    {
+      "src": "/assets/erpnext/images/erpnext-logo.svg",
+      "alt": ""
+    },
+    {
+      "src": "/assets/erpnext/images/erpnext-logo.svg",
+      "alt": ""
+    },
+    {
+      "src": "/assets/erpnext/images/erpnext-logo.svg",
+      "alt": ""
+    },
+    {
+      "src": "/assets/erpnext/images/erpnext-logo.svg",
+      "alt": ""
+    }
+  ],
+  "login_favicons": [
+    "/assets/erpnext/images/erpnext-favicon.svg"
+  ],
+  "error_page": "Page not found\nBack to Home",
+  "settings_sidebar_title": "ReyBill Settings",
+  "settings_remaining_brand_terms": [
+    "ERPNext"
+  ]
+}

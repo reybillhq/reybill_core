@@ -1,0 +1,33 @@
+doctype,record_or_field,field,matched_terms,classification,reason
+Desktop Icon,ERPNext Settings,label,ERPNext,SAFE TO WHITE-LABEL,Translate caption only
+Desktop Icon,ERPNext Settings,link_to,ERPNext,INTERNAL — DO NOT TOUCH,Navigation target or parent relationship
+Desktop Icon,CRM,parent_icon,ERPNext,INTERNAL — DO NOT TOUCH,Navigation target or parent relationship
+Desktop Icon,Selling,parent_icon,ERPNext,INTERNAL — DO NOT TOUCH,Navigation target or parent relationship
+Desktop Icon,Buying,parent_icon,ERPNext,INTERNAL — DO NOT TOUCH,Navigation target or parent relationship
+Desktop Icon,Stock,parent_icon,ERPNext,INTERNAL — DO NOT TOUCH,Navigation target or parent relationship
+Desktop Icon,Assets,parent_icon,ERPNext,INTERNAL — DO NOT TOUCH,Navigation target or parent relationship
+Desktop Icon,Projects,parent_icon,ERPNext,INTERNAL — DO NOT TOUCH,Navigation target or parent relationship
+Desktop Icon,Support,parent_icon,ERPNext,INTERNAL — DO NOT TOUCH,Navigation target or parent relationship
+Desktop Icon,Quality,parent_icon,ERPNext,INTERNAL — DO NOT TOUCH,Navigation target or parent relationship
+Desktop Icon,Manufacturing,parent_icon,ERPNext,INTERNAL — DO NOT TOUCH,Navigation target or parent relationship
+Desktop Icon,ERPNext,label,ERPNext,SAFE TO WHITE-LABEL,Translate caption only
+Workspace,ERPNext Settings,title,ERPNext,SAFE TO WHITE-LABEL,Translate displayed caption; preserve stored workspace/sidebar key
+Workspace,ERPNext Settings,label,ERPNext,SAFE TO WHITE-LABEL,Translate displayed caption; preserve stored workspace/sidebar key
+Workspace,Support,content,Frappe,NEEDS REVIEW,Presentation or provider context requires separate approval
+Workspace,CRM,content,Frappe,NEEDS REVIEW,Presentation or provider context requires separate approval
+Workspace Sidebar,ERPNext Settings,title,ERPNext,SAFE TO WHITE-LABEL,Translate displayed caption; preserve stored workspace/sidebar key
+Navbar Item,e942copc69,item_label,Frappe Support,SAFE TO WHITE-LABEL,Adapt only requested menu presentation; preserve standard item record
+DocField,Item.is_stock_item,description,ERPNext,SAFE TO WHITE-LABEL,Visible description or label; preserve technical field name
+DocField,Email Account.validate_frappe_mail_settings,label,Frappe,NEEDS REVIEW,Presentation or provider context requires separate approval
+DocField,Email Account.frappe_mail_site,label,Frappe,NEEDS REVIEW,Presentation or provider context requires separate approval
+DocField,Email Account.service,options,Frappe,NEEDS REVIEW,Presentation or provider context requires separate approval
+DocField,Document Naming Settings.help_html,options,ERPNext,NEEDS REVIEW,Presentation or provider context requires separate approval
+DocField,CRM Settings.frappe_crm_section,label,Frappe,NEEDS REVIEW,Presentation or provider context requires separate approval
+DocField,CRM Settings.enable_frappe_crm_data_synchronization,label,Frappe,NEEDS REVIEW,Presentation or provider context requires separate approval
+DocField,CRM Settings.allowed_users,options,Frappe,INTERNAL — DO NOT TOUCH,Technical DocType link target
+DocField,Employee Group Table.user_id,label,ERPNext,SAFE TO WHITE-LABEL,Visible description or label; preserve technical field name
+DocField,Social Login Key.social_login_provider,options,Frappe,NEEDS REVIEW,Presentation or provider context requires separate approval
+DocField,SMS Settings.parameters,description,ERPNext,NEEDS REVIEW,Presentation or provider context requires separate approval
+Desktop Icon,Framework,label,Framework,SAFE TO WHITE-LABEL,Caption mapped to ReyBill Work; stored label unchanged
+Website Settings,Website Settings,app_name,Frappe,SAFE TO WHITE-LABEL,Login/website branding outside this milestone
+System Settings,System Settings,app_name,Frappe,SAFE TO WHITE-LABEL,Login/browser naming outside this milestone
