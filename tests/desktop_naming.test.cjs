@@ -4,7 +4,7 @@ const path = require("node:path");
 const test = require("node:test");
 const vm = require("node:vm");
 
-test("native v16 avatar actions survive naming, repeated renders, and script reloads", () => {
+test("native v16 avatar actions survive ReyBill About routing, repeated renders, and script reloads", () => {
   const nativeSource = fs.readFileSync(
     path.resolve(__dirname, "../../frappe/frappe/desk/page/desktop/desktop.js"),
     "utf8"
@@ -73,6 +73,7 @@ test("native v16 avatar actions survive naming, repeated renders, and script rel
   };
   const context = {
     frappe,
+    reybill: { about: { show: () => calls.push("reybill-about") } },
     $,
     document,
     DEFAULT_MENU_ITEM_ORDER: 50,
@@ -119,7 +120,7 @@ test("native v16 avatar actions survive naming, repeated renders, and script rel
   for (const index of [1, 2, 3, 4, 5, 6]) items[index].onClick();
   assert.deepEqual(calls, [
     "theme",
-    "about",
+    "reybill-about",
     ["configured-support-destination", "_blank", "noopener,noreferrer"],
     "reset",
     "reload",

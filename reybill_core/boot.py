@@ -2,7 +2,16 @@
 
 from copy import deepcopy
 
-from reybill_core.branding import DESKTOP_LABELS, MENU_LABELS, SUPPORT_URL
+from reybill_core import __version__
+from reybill_core.branding import (
+	ABOUT_ACTION,
+	APPLICATION_LABELS,
+	DESKTOP_LABELS,
+	LOGOS,
+	MENU_LABELS,
+	SIDEBAR_LABELS,
+	SUPPORT_URL,
+)
 
 
 def extend_bootinfo(bootinfo):
@@ -12,6 +21,14 @@ def extend_bootinfo(bootinfo):
 	bootinfo["reybill_branding"] = {
 		"menu_labels": dict(MENU_LABELS),
 		"support_url": SUPPORT_URL,
+		"sidebar_labels": dict(SIDEBAR_LABELS),
+		"about": {
+			"version": __version__,
+			"logos": dict(LOGOS),
+			"applications": [
+				label for app, label in APPLICATION_LABELS.items() if app in bootinfo.get("versions", {})
+			],
+		},
 	}
 
 	navbar = bootinfo.get("navbar_settings")
@@ -29,6 +46,12 @@ def extend_bootinfo(bootinfo):
 			item["item_label"] = MENU_LABELS[label]
 			if label == "Frappe Support" and item.get("item_type") == "Route":
 				item["route"] = SUPPORT_URL
+			if (
+				label == "About"
+				and item.get("item_type") == "Action"
+				and item.get("action") == "frappe.ui.toolbar.show_about()"
+			):
+				item["action"] = ABOUT_ACTION
 	bootinfo["navbar_settings"] = navbar
 
 

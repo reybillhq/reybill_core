@@ -1,8 +1,9 @@
 import unittest
 from copy import deepcopy
 
+from reybill_core import __version__
 from reybill_core.boot import extend_bootinfo, update_desk_context
-from reybill_core.branding import DESKTOP_LABELS, MENU_LABELS, SUPPORT_URL
+from reybill_core.branding import ABOUT_ACTION, DESKTOP_LABELS, LOGOS, MENU_LABELS, SUPPORT_URL
 
 
 class BootNamingTest(unittest.TestCase):
@@ -10,7 +11,12 @@ class BootNamingTest(unittest.TestCase):
 		messages = {"Unrelated": "Existing translation", "Framework": "Existing framework label"}
 		navbar = {
 			"help_dropdown": [
-				{"name": "about-id", "item_label": "About", "item_type": "Action", "action": "native()"},
+				{
+					"name": "about-id",
+					"item_label": "About",
+					"item_type": "Action",
+					"action": "frappe.ui.toolbar.show_about()",
+				},
 				{
 					"name": "support-id",
 					"item_label": "Frappe Support",
@@ -24,7 +30,15 @@ class BootNamingTest(unittest.TestCase):
 		}
 		icons = [{"name": "Framework", "label": "Framework", "hidden": 0, "link": "/desk/build"}]
 		original = deepcopy({"messages": messages, "navbar": navbar, "icons": icons})
-		boot = {"__messages": messages, "navbar_settings": navbar, "desktop_icons": icons}
+		versions = {"frappe": "16.36.1", "erpnext": "16.37.0", "reybill_core": __version__}
+		apps = [{"app_name": "erpnext", "app_title": "ERPNext", "app_route": "/desk/crm"}]
+		boot = {
+			"__messages": messages,
+			"navbar_settings": navbar,
+			"desktop_icons": icons,
+			"versions": versions,
+			"app_data": apps,
+		}
 		extend_bootinfo(boot)
 
 		self.assertEqual({"messages": messages, "navbar": navbar, "icons": icons}, original)
@@ -34,11 +48,20 @@ class BootNamingTest(unittest.TestCase):
 		self.assertEqual(boot["__messages"]["Unrelated"], "Existing translation")
 		self.assertNotIn("About", boot["__messages"])
 		items = boot["navbar_settings"]["help_dropdown"]
-		self.assertEqual(items[0], {**navbar["help_dropdown"][0], "item_label": MENU_LABELS["About"]})
+		self.assertEqual(
+			items[0],
+			{**navbar["help_dropdown"][0], "item_label": MENU_LABELS["About"], "action": ABOUT_ACTION},
+		)
 		self.assertEqual(items[1]["route"], SUPPORT_URL)
 		self.assertEqual(items[1]["item_label"], MENU_LABELS["Frappe Support"])
 		self.assertEqual(items[1]["name"], "support-id")
 		self.assertEqual(items[2], navbar["help_dropdown"][2])
+		self.assertIs(boot["versions"], versions)
+		self.assertIs(boot["app_data"], apps)
+		self.assertEqual(apps[0]["app_title"], "ERPNext")
+		self.assertEqual(boot["reybill_branding"]["about"]["applications"], ["ReyBill", "ReyBill Core"])
+		self.assertEqual(boot["reybill_branding"]["about"]["version"], __version__)
+		self.assertEqual(boot["reybill_branding"]["about"]["logos"], LOGOS)
 
 		first = deepcopy(boot)
 		extend_bootinfo(boot)
@@ -56,6 +79,7 @@ class BootNamingTest(unittest.TestCase):
 		boot["navbar_settings"] = NavbarDocument()
 		extend_bootinfo(boot)
 		self.assertEqual(boot["navbar_settings"]["help_dropdown"][0]["action"], "native()")
+		self.assertEqual(boot["reybill_branding"]["about"]["applications"], [])
 
 	def test_final_desk_context_after_native_navbar_refresh(self):
 		original_boot = {

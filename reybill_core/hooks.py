@@ -10,6 +10,10 @@ extend_bootinfo = "reybill_core.boot.extend_bootinfo"
 page_js = {"desktop": "public/js/desktop_naming.js"}
 # v16 refreshes Navbar Settings after extend_bootinfo; adapt the final Desk context.
 update_website_context = "reybill_core.boot.update_desk_context"
+app_include_js = [
+	"/assets/reybill_core/js/about.js",
+	"/assets/reybill_core/js/desk_branding.js",
+]
 
 # Apps
 # ------------------

@@ -1,0 +1,13 @@
+{
+  "release_version": "0.0.3",
+  "site": "reybill.localhost",
+  "desktop_about_text": "About ReyBill\nReyBill\n\nBusiness management software powered by ReyBill.\n\nVersion\nReyBill Core 0.0.3\nINSTALLED APPLICATIONS\nReyBill\nReyBill Core\n\u00a9 ReyBill Ltd",
+  "official_logo": "/assets/reybill_core/images/branding/reybill-logo-black.svg",
+  "diagnostic_versions": {
+    "frappe": "16.36.1",
+    "erpnext": "16.37.0",
+    "reybill_core": "0.0.3"
+  },
+  "crm_help_about": "ReyBill Core 0.0.3",
+  "browser_page_errors": []
+}

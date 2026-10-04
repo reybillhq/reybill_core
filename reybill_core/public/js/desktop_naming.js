@@ -14,6 +14,9 @@
 				const label = item.label;
 				if (!Object.hasOwn(branding.menu_labels, label)) continue;
 				item.label = branding.menu_labels[label];
+				if (label === "About") {
+					item.onClick = () => reybill.about.show();
+				}
 				if (label === "Frappe Support") {
 					item.onClick = function () {
 						window.open(branding.support_url, "_blank", "noopener,noreferrer");
@@ -24,7 +27,7 @@
 	}
 
 	// This native event runs before setup_avatar() on every Desktop render.
-	// Wrap only this page instance and keep native callbacks and other apps' items.
+	// Wrap only this page instance; other actions and other apps' items stay native.
 	$(document)
 		.off(event_name)
 		.on(event_name, (_event, { desktop }) => {
