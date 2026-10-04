@@ -1,0 +1,160 @@
+{
+  "version": "0.0.4",
+  "complete": true,
+  "login": {
+    "title": "Login - ReyBill",
+    "logo": "/assets/reybill_core/images/branding/reybill-logo-black.svg?v=0.0.4&h=62f8ac4f5042",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ]
+  },
+  "native_required_fields": "Native email/password validation retained",
+  "forgot_password": {
+    "title": "Login - ReyBill",
+    "logo": "/assets/reybill_core/images/branding/reybill-logo-black.svg?v=0.0.4&h=62f8ac4f5042",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ],
+    "native_response": "200 generic anti-enumeration response verified in earlier runs; submission skipped on final rerun to preserve the native rate limit"
+  },
+  "verification_ui": {
+    "title": "Login - ReyBill",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ],
+    "scope": "Native OTP presentation rendered only; live 2FA remains disabled and issuer unchanged"
+  },
+  "native_password_login": "Successful native password login using temporary Desk User",
+  "logout_login_cycle": "Native logout returned to branded Login",
+  "reset_password": {
+    "title": "Set Password",
+    "logo": "/assets/reybill_core/images/branding/reybill-logo-black.svg?v=0.0.4&h=62f8ac4f5042",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ],
+    "native_reset": "One-time native reset succeeded for temporary account"
+  },
+  "password_after_reset": "Native login succeeded with the newly reset password",
+  "mobile_login": {
+    "title": "Login - ReyBill",
+    "logo": "/assets/reybill_core/images/branding/reybill-logo-black.svg?v=0.0.4&h=62f8ac4f5042",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ]
+  },
+  "guest_deep_link": "Native redirect retained /desk/dashboard-view/CRM",
+  "desktop": {
+    "title": "Desktop",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29",
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ]
+  },
+  "crm": {
+    "title": "CRM Dashboard",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29",
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ]
+  },
+  "authenticated_reload_deep_link": "CRM deep link reloaded successfully",
+  "Accounting": {
+    "folder_title": "Accounting",
+    "browser_title": "Desktop",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29",
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ],
+    "scope": "Native Accounting item is a folder, not a workspace route"
+  },
+  "Customer": {
+    "title": "Customer",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29",
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ]
+  },
+  "Sales Invoice": {
+    "title": "Sales Invoice",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29",
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ]
+  },
+  "Workspace": {
+    "title": "Home",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29",
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ]
+  },
+  "Customer form": {
+    "title": "New Customer - new-customer-hxcctbnwvx",
+    "favicon": [
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29",
+      "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+    ],
+    "unsaved": true
+  },
+  "About": "ReyBill Core 0.0.4; no visible vendor branding",
+  "splash_animation": {
+    "source": "/assets/reybill_core/animations/Splash_color_logo_gradient_loop.svg?v=0.0.4&h=bcc0580b43b7",
+    "initial_title": "ReyBill",
+    "fallback": false,
+    "animated_pixels_changed": true,
+    "json_not_requested": true,
+    "native_removal_after_release_ms": 826,
+    "desktop_ready": true,
+    "network_hold_is_test_only": true
+  },
+  "splash_fallback": {
+    "source": "/assets/reybill_core/images/branding/reybill-logo-black.svg?v=0.0.4&h=62f8ac4f5042",
+    "initial_title": "ReyBill",
+    "fallback": true,
+    "json_not_requested": true,
+    "native_removal_after_release_ms": 815,
+    "desktop_ready": true,
+    "network_hold_is_test_only": true
+  },
+  "splash_reduced_motion": {
+    "source": "/assets/reybill_core/images/branding/reybill-logo-black.svg?v=0.0.4&h=62f8ac4f5042",
+    "initial_title": "ReyBill",
+    "fallback": true,
+    "animation_not_requested": true,
+    "json_not_requested": true,
+    "native_removal_after_release_ms": 844,
+    "desktop_ready": true,
+    "network_hold_is_test_only": true
+  },
+  "splash_script_failure": {
+    "source": "/assets/reybill_core/images/branding/reybill-logo-black.svg?v=0.0.4&h=62f8ac4f5042",
+    "initial_title": "ReyBill",
+    "fallback": true,
+    "json_not_requested": true,
+    "native_removal_after_release_ms": 814,
+    "desktop_ready": true,
+    "network_hold_is_test_only": true
+  },
+  "splash_mobile": {
+    "source": "/assets/reybill_core/animations/Splash_color_logo_gradient_loop.svg?v=0.0.4&h=bcc0580b43b7",
+    "initial_title": "ReyBill",
+    "fallback": false,
+    "animated_pixels_changed": true,
+    "json_not_requested": true,
+    "native_removal_after_release_ms": 786,
+    "desktop_ready": true,
+    "network_hold_is_test_only": true
+  },
+  "splash_late_animation": {
+    "source": "/assets/reybill_core/images/branding/reybill-logo-black.svg?v=0.0.4&h=62f8ac4f5042",
+    "initial_title": "ReyBill",
+    "fallback": true,
+    "json_not_requested": true,
+    "native_removal_after_release_ms": 749,
+    "late_animation_did_not_block_or_restore_splash": true,
+    "desktop_ready": true,
+    "network_hold_is_test_only": true
+  },
+  "javascript_disabled": "Server-rendered official static logo; no vendor fallback",
+  "browser_page_errors": []
+}

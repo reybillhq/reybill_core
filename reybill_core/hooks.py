@@ -9,10 +9,15 @@ app_license = "mit"
 extend_bootinfo = "reybill_core.boot.extend_bootinfo"
 page_js = {"desktop": "public/js/desktop_naming.js"}
 # v16 refreshes Navbar Settings after extend_bootinfo; adapt the final Desk context.
-update_website_context = "reybill_core.boot.update_desk_context"
+update_website_context = "reybill_core.website.update_website_context"
+after_install = "reybill_core.setup.apply_branding"
+after_migrate = "reybill_core.setup.apply_branding"
+web_include_css = ["/assets/reybill_core/css/login_branding.css"]
+jinja = {"methods": ["reybill_core.website.get_splash_config"]}
 app_include_js = [
 	"/assets/reybill_core/js/about.js",
 	"/assets/reybill_core/js/desk_branding.js",
+	"/assets/reybill_core/js/desktop_logo.js",
 ]
 
 # Apps

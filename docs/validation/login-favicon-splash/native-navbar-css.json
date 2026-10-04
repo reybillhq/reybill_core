@@ -1,0 +1,26 @@
+{
+  "computed": {
+    "width": "42.6562px",
+    "height": "32px"
+  },
+  "rules": [
+    {
+      "selector": ".navbar-home img",
+      "source_url": "http://reybill.localhost:8000/assets/frappe/dist/css/desk.bundle.6ZEECN56.css",
+      "native_source": "Native Frappe Desk bundle (public/scss/desk/navbar.scss)",
+      "properties": {
+        "height": "32px",
+        "width": "32px"
+      }
+    },
+    {
+      "selector": "#brand-logo",
+      "source_url": "",
+      "native_source": "Native Frappe Desktop page (desk/page/desktop/desktop.css)",
+      "properties": {
+        "width": "auto"
+      }
+    }
+  ],
+  "reybill_navbar_css_loaded": false
+}

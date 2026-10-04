@@ -1,0 +1,105 @@
+{
+  "Framework": "ReyBill Work",
+  "ERPNext Settings": "ReyBill Settings",
+  "ERPNext": {
+    "visible_icons": 0,
+    "display_mapping": "ReyBill"
+  },
+  "Frappe Framework": {
+    "visible_icons": 0,
+    "display_mapping": "ReyBill Framework"
+  },
+  "profile_menu": [
+    "Edit Profile",
+    "Toggle Theme",
+    "About ReyBill",
+    "ReyBill Support",
+    "Reset Desktop Layout",
+    "Logout"
+  ],
+  "about_dialog": {
+    "text": "About ReyBill\nReyBill\n\nBusiness management software powered by ReyBill.\n\nVersion\nReyBill Core 0.0.4\nINSTALLED APPLICATIONS\nReyBill\nReyBill Core\n\u00a9 ReyBill Ltd",
+    "logo": "/assets/reybill_core/images/branding/reybill-logo-black.svg?v=0.0.4&h=62f8ac4f5042",
+    "links": [
+      {
+        "url": "https://reybill.com/",
+        "target": "_blank"
+      }
+    ]
+  },
+  "dark_logo": {
+    "src": "/assets/reybill_core/images/branding/reybill-logo-white.svg?v=0.0.4&h=d2040b692c56",
+    "preference_saved": false
+  },
+  "diagnostic_versions": {
+    "frappe": "16.36.1",
+    "erpnext": "16.37.0",
+    "reybill_core": "0.0.4"
+  },
+  "native_about_functions": "Original implementations intact; customer menus use ReyBill",
+  "support": {
+    "url": "https://reybill.com/",
+    "new_tab": true,
+    "external_request_intercepted": true
+  },
+  "theme": "Switch Theme\nFrappe Light\nTimeless Night\nAutomatic",
+  "edit_profile": "/desk/user/Administrator",
+  "framework_folder": "ReyBill Work",
+  "framework_navigation": "/desk/doctype",
+  "settings_navigation": "/desk/global-defaults/Global%20Defaults",
+  "settings_sidebar_title": "ReyBill Settings",
+  "settings_remaining_brand_terms": [],
+  "help_boot_labels": [
+    "About ReyBill",
+    "Keyboard Shortcuts",
+    "System Health",
+    "ReyBill Support"
+  ],
+  "help_visible_labels": [
+    "Global Settings",
+    "About ReyBill",
+    "Keyboard Shortcuts",
+    "System Health",
+    "ReyBill Support"
+  ],
+  "crm": {
+    "title": "CRM",
+    "subtitle": "ReyBill",
+    "route": "/desk/dashboard-view/CRM",
+    "external_promotion_count": 0,
+    "app_id_preserved": true
+  },
+  "help_support": {
+    "url": "https://reybill.com/",
+    "new_tab": true
+  },
+  "keyboard_shortcuts": "Native dialog opened through CRM Help",
+  "system_health": "Native System Health Report rendered; save remains disabled",
+  "workspace_switching": "Native CRM Workspaces menu switched to Selling",
+  "logout": "/login",
+  "login_title": "Login - ReyBill",
+  "login_text": "Sign In\n\nWelcome! Please sign in to continue.\n\nEmail\nPassword\n\nForgot password?\n\nContinue\nLogin with Email Link",
+  "login_images": [
+    {
+      "src": "/assets/reybill_core/images/branding/reybill-logo-black.svg",
+      "alt": ""
+    },
+    {
+      "src": "/assets/reybill_core/images/branding/reybill-logo-black.svg",
+      "alt": ""
+    },
+    {
+      "src": "/assets/reybill_core/images/branding/reybill-logo-black.svg",
+      "alt": ""
+    },
+    {
+      "src": "/assets/reybill_core/images/branding/reybill-logo-black.svg",
+      "alt": ""
+    }
+  ],
+  "login_favicons": [
+    "/assets/reybill_core/images/branding/reybill-icon-black.png"
+  ],
+  "error_page": "Page not found\nBack to Home",
+  "browser_page_errors": []
+}

@@ -1,0 +1,7 @@
+/* Preserve the official SVG canvas and native authentication form structure. */
+body.reybill-auth .page-card-head img.app-logo {
+	width: 160px;
+	height: auto;
+	max-width: 100%;
+	max-height: none;
+}

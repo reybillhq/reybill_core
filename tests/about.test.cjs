@@ -36,7 +36,7 @@ test("ReyBill About uses configured original assets, preserves diagnostics and n
       reybill_branding: {
         support_url: "configured-owned-url",
         about: {
-          version: "0.0.3",
+          version: "0.0.4",
           logos: { light: "official-black.svg", dark: "official-white.svg" },
           applications: ["ReyBill", "ReyBill Core"],
         },
@@ -79,7 +79,7 @@ test("ReyBill About uses configured original assets, preserves diagnostics and n
   assert.ok(
     dialog.body.html.includes('href="configured-owned-url" target="_blank"')
   );
-  assert.ok(dialog.body.html.includes("ReyBill Core 0.0.3"));
+  assert.ok(dialog.body.html.includes("ReyBill Core 0.0.4"));
   assert.ok(
     dialog.body.html.includes(
       "Business management software powered by ReyBill."

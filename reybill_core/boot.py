@@ -22,6 +22,7 @@ def extend_bootinfo(bootinfo):
 		"menu_labels": dict(MENU_LABELS),
 		"support_url": SUPPORT_URL,
 		"sidebar_labels": dict(SIDEBAR_LABELS),
+		"navbar_logos": dict(LOGOS),
 		"about": {
 			"version": __version__,
 			"logos": dict(LOGOS),

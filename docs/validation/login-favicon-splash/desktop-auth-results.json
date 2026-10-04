@@ -1,0 +1,18 @@
+{
+  "invalid_password": "Native 401 and Invalid credentials, try again. banner verified in the preceding browser run",
+  "forgot_password": "Native form reachable",
+  "enter_to_submit": true,
+  "reload": true,
+  "logout_login_order": [
+    "Organization",
+    "Accounting",
+    "Financial Reports",
+    "Buying",
+    "CRM",
+    "Quality",
+    "Selling",
+    "Support"
+  ],
+  "direct_desk_redirect": "Logged out /desk/crm -> native login -> /desk/crm",
+  "page_errors": []
+}

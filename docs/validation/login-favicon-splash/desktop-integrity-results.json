@@ -1,0 +1,13 @@
+{
+  "frappe": {
+    "tracked_files_unchanged": 3767
+  },
+  "erpnext": {
+    "tracked_files_unchanged": 5189
+  },
+  "official_assets_unchanged": 7,
+  "desktop_records": "Only requested idx, three visible default flags and ERPNext logo_url differ; artwork/routes/relationships/hidden ReyBill unchanged",
+  "setup_idempotent_after_migration": true,
+  "saved_layout_records": 0,
+  "authenticator_issuer_unchanged": true
+}

@@ -1,0 +1,632 @@
+{
+  "version": "0.0.4",
+  "responsive": {
+    "light-1440": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 1430,
+        "height": 52,
+        "right": 1430,
+        "bottom": 52
+      },
+      "search": {
+        "x": 554.328125,
+        "y": 9.5,
+        "width": 300,
+        "height": 32,
+        "right": 854.328125,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 1346,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 1410,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    },
+    "light-1024": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 1014,
+        "height": 52,
+        "right": 1014,
+        "bottom": 52
+      },
+      "search": {
+        "x": 346.328125,
+        "y": 9.5,
+        "width": 300,
+        "height": 32,
+        "right": 646.328125,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 930,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 994,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    },
+    "light-768": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 758,
+        "height": 52,
+        "right": 758,
+        "bottom": 52
+      },
+      "search": {
+        "x": 218.328125,
+        "y": 9.5,
+        "width": 300,
+        "height": 32,
+        "right": 518.328125,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 674,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 738,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    },
+    "light-430": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 420,
+        "height": 52,
+        "right": 420,
+        "bottom": 52
+      },
+      "search": {
+        "x": 72.65625,
+        "y": 9.5,
+        "width": 253.34375,
+        "height": 32,
+        "right": 326,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 336,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 400,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    },
+    "light-390": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 380,
+        "height": 52,
+        "right": 380,
+        "bottom": 52
+      },
+      "search": {
+        "x": 72.65625,
+        "y": 9.5,
+        "width": 213.34375,
+        "height": 32,
+        "right": 286,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 296,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 360,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    },
+    "light-320": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 310,
+        "height": 52,
+        "right": 310,
+        "bottom": 52
+      },
+      "search": {
+        "x": 72.65625,
+        "y": 9.5,
+        "width": 143.34375,
+        "height": 32,
+        "right": 216,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 226,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 290,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    },
+    "dark-1440": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 1430,
+        "height": 52,
+        "right": 1430,
+        "bottom": 52
+      },
+      "search": {
+        "x": 554.328125,
+        "y": 9.5,
+        "width": 300,
+        "height": 32,
+        "right": 854.328125,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 1346,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 1410,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    },
+    "dark-1024": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 1014,
+        "height": 52,
+        "right": 1014,
+        "bottom": 52
+      },
+      "search": {
+        "x": 346.328125,
+        "y": 9.5,
+        "width": 300,
+        "height": 32,
+        "right": 646.328125,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 930,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 994,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    },
+    "dark-768": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 758,
+        "height": 52,
+        "right": 758,
+        "bottom": 52
+      },
+      "search": {
+        "x": 218.328125,
+        "y": 9.5,
+        "width": 300,
+        "height": 32,
+        "right": 518.328125,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 674,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 738,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    },
+    "dark-430": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 420,
+        "height": 52,
+        "right": 420,
+        "bottom": 52
+      },
+      "search": {
+        "x": 72.65625,
+        "y": 9.5,
+        "width": 253.34375,
+        "height": 32,
+        "right": 326,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 336,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 400,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    },
+    "dark-390": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 380,
+        "height": 52,
+        "right": 380,
+        "bottom": 52
+      },
+      "search": {
+        "x": 72.65625,
+        "y": 9.5,
+        "width": 213.34375,
+        "height": 32,
+        "right": 286,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 296,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 360,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    },
+    "dark-320": {
+      "logo": {
+        "x": 20,
+        "y": 9.5,
+        "width": 42.65625,
+        "height": 32,
+        "right": 62.65625,
+        "bottom": 41.5
+      },
+      "navbar": {
+        "x": 0,
+        "y": 0,
+        "width": 310,
+        "height": 52,
+        "right": 310,
+        "bottom": 52
+      },
+      "search": {
+        "x": 72.65625,
+        "y": 9.5,
+        "width": 143.34375,
+        "height": 32,
+        "right": 216,
+        "bottom": 41.5
+      },
+      "navigation": {
+        "x": 226,
+        "y": 11.5,
+        "width": 64,
+        "height": 28,
+        "right": 290,
+        "bottom": 39.5
+      },
+      "overflow": false,
+      "fit": "fill",
+      "native_sizing_rules": [
+        {
+          "selector": ".navbar-home img",
+          "properties": {
+            "height": "32px",
+            "width": "32px"
+          }
+        },
+        {
+          "selector": "#brand-logo",
+          "properties": {
+            "width": "auto"
+          }
+        }
+      ]
+    }
+  },
+  "light_switch_and_reload": true,
+  "dark_switch_and_reload": true,
+  "desktop_asset": {
+    "source_file": "reybill_core/public/images/branding/Reybill_desk_icon.png",
+    "displayed_url": "/assets/reybill_core/images/branding/Reybill_desk_icon.png?v=0.0.4&h=c2b0e400d772",
+    "source_sha256": "c2b0e400d772a7c00450580b3a2595aff9d8d62f08f9794fbc8a2ca51857860e",
+    "displayed_response_sha256": "c2b0e400d772a7c00450580b3a2595aff9d8d62f08f9794fbc8a2ca51857860e",
+    "removed": true
+  },
+  "native_login_smoke": {
+    "javascript_executes": true,
+    "logo": "/assets/reybill_core/images/branding/reybill-logo-black.svg?v=0.0.4&h=62f8ac4f5042",
+    "favicon": "/assets/reybill_core/images/branding/reybill-icon-black.png?v=0.0.4&h=987fe5b3db29"
+  },
+  "page_errors": []
+}

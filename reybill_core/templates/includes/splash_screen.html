@@ -1,0 +1,23 @@
+{# App-local Jinja include; Frappe still owns the .splash removal lifecycle. #}
+{% set branding = reybill_splash or get_splash_config() %}
+<div class="centered splash">
+	<picture>
+	{% if branding.automatic %}
+		<source media="(prefers-color-scheme: dark)" srcset="{{ branding.dark_fallback | e }}"
+			data-reybill-splash-dark data-fallback="{{ branding.dark_fallback | e }}">
+	{% endif %}
+	<img
+		src="{{ branding.fallback | e }}"
+		data-reybill-splash
+		data-animation="{{ branding.animation | e }}"
+		data-fallback="{{ branding.fallback | e }}"
+		alt="{{ branding.label | e }}"
+		style="width: auto; max-width: 200px; max-height: 150px;"
+	>
+	</picture>
+	{# Login also embeds this include inside a JavaScript string before redirecting.
+	   Keep that transition static; script tags belong only to the initial Desk HTML. #}
+	{% if template == "www/desk.html" %}
+	<script src="/assets/reybill_core/js/splash.js"></script>
+	{% endif %}
+</div>

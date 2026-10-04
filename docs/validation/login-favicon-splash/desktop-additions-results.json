@@ -1,0 +1,84 @@
+{
+  "canonical_order": [
+    "ReyBill Work",
+    "Home",
+    "Organization",
+    "Accounting",
+    "Assets",
+    "Buying",
+    "CRM",
+    "Manufacturing",
+    "Projects",
+    "Quality",
+    "Selling",
+    "Stock",
+    "Support",
+    "Subcontracting",
+    "ReyBill Settings"
+  ],
+  "workspace": "Native Add New Workspace action appears last in edit mode; no persistent Workspace record exists.",
+  "dark": {
+    "logo": "/assets/reybill_core/images/branding/reybill-logo-white.svg?v=0.0.4&h=d2040b692c56",
+    "bounds": {
+      "x": 20,
+      "y": 8.5,
+      "width": 135,
+      "height": 34
+    },
+    "runtime_switch": true,
+    "reload": true
+  },
+  "light": {
+    "logo": "/assets/reybill_core/images/branding/reybill-logo-black.svg?v=0.0.4&h=62f8ac4f5042",
+    "bounds": {
+      "x": 20,
+      "y": 8.5,
+      "width": 135,
+      "height": 34
+    },
+    "runtime_switch": true,
+    "reload": true
+  },
+  "edit_mode_order": [
+    "ReyBill Work",
+    "Home",
+    "Organization",
+    "Accounting",
+    "Assets",
+    "Buying",
+    "CRM",
+    "Manufacturing",
+    "Projects",
+    "Quality",
+    "Selling",
+    "Stock",
+    "Support",
+    "Subcontracting",
+    "ReyBill Settings",
+    "Workspace"
+  ],
+  "removed_reybill": {
+    "internal_name": "ERPNext",
+    "hidden": 1,
+    "image": "/assets/reybill_core/images/branding/Reybill_desk_icon.png?v=0.0.4&h=c2b0e400d772"
+  },
+  "visible_artwork_unchanged_across_theme_and_reload": true,
+  "reset_default_render_path": [
+    "ReyBill Work",
+    "Home",
+    "Organization",
+    "Accounting",
+    "Assets",
+    "Buying",
+    "CRM",
+    "Manufacturing",
+    "Projects",
+    "Quality",
+    "Selling",
+    "Stock",
+    "Support",
+    "Subcontracting",
+    "ReyBill Settings"
+  ],
+  "page_errors": []
+}
