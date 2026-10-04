@@ -1,0 +1,14 @@
+{
+  "full_browser_run_console_error_count": 98,
+  "spot_check_with_adapter_console_errors": 5,
+  "spot_check_native_without_adapter_console_errors": 5,
+  "reproduced_existing_errors": [
+    "/socket.io/ polling returns HTTP 404",
+    "Error connecting to socket.io: xhr poll error",
+    "/undefined returns HTTP 404"
+  ],
+  "module_icon_failed_requests": 0,
+  "uncaught_page_errors": 0,
+  "native_baseline_adapter_disabled_only_in_test_browser": true,
+  "upstream_or_site_runtime_not_modified": true
+}

@@ -1,0 +1,416 @@
+[
+  {
+    "filename": "reybill-icon-accounts-setup.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 793442,
+    "sha256": "ed05a930ce8fc553c75bece3ac0a7da358b84e4f3117c25b289e49967e7501c3",
+    "module": "accounts-setup"
+  },
+  {
+    "filename": "reybill-icon-assets.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 61703,
+    "sha256": "99bfe44e1632e3f9b88483aee6ee04e57a71c414024cf564c8ecb4c52f8408de",
+    "module": "assets"
+  },
+  {
+    "filename": "reybill-icon-banking.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 56925,
+    "sha256": "5b39c296ff8498ede6b8f9d5d4804f507635e436037a7084e4576c0e5e3676db",
+    "module": "banking"
+  },
+  {
+    "filename": "reybill-icon-budget.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 646702,
+    "sha256": "1293fcc7a363861f2d37017fbd8062961a94934efcd90ccee8e5e7abf9a9d273",
+    "module": "budget"
+  },
+  {
+    "filename": "reybill-icon-buying.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 72720,
+    "sha256": "6ae10c3539be437c3addad5f73a6ed412f5f94bbd71d1fbb7b22917e78edea42",
+    "module": "buying"
+  },
+  {
+    "filename": "reybill-icon-crm.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 72414,
+    "sha256": "3a91145506819a54af63e898d963813abe7c8895e2743b4e0af007b4c12350b6",
+    "module": "crm"
+  },
+  {
+    "filename": "reybill-icon-financial-reports.png",
+    "extension": ".png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 51402,
+    "sha256": "6c5f6ef01c80d72fc01c205dc3273cd4acee3b743e78327c03a552278463e79f",
+    "module": "financial-reports"
+  },
+  {
+    "filename": "reybill-icon-invoicing.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 68568,
+    "sha256": "023a17327b19122d63eedd64de296150d868e7e418310b7f426928d0a505ce1d",
+    "module": "invoicing"
+  },
+  {
+    "filename": "reybill-icon-manufacturing.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 64887,
+    "sha256": "c44247401b4b89c69d27fe1e6c53425825cd880483b0b3a2bebba94f053fb30b",
+    "module": "manufacturing"
+  },
+  {
+    "filename": "reybill-icon-organization.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 63572,
+    "sha256": "9262cf815eb4e73a1a5e7bcc95a94e2c609d2e9ca5d2d1b5f5cbaf8ab80ff453",
+    "module": "organization"
+  },
+  {
+    "filename": "reybill-icon-payments.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 65178,
+    "sha256": "a4c0488fe81d096ea9f00709fff4832f36fcdd761317065abd2e15b845d7ceb1",
+    "module": "payments"
+  },
+  {
+    "filename": "reybill-icon-projects.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 64295,
+    "sha256": "6931e47d0c7154762e869e5232dbf577a5afe44bcd6813d2377ebd43323454e1",
+    "module": "projects"
+  },
+  {
+    "filename": "reybill-icon-quality.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 72482,
+    "sha256": "b3115eb69da56f7176ce445f05a78d46c9e49cf2fe3dcebb3804a9d1730bd6eb",
+    "module": "quality"
+  },
+  {
+    "filename": "reybill-icon-reybill.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 63375,
+    "sha256": "955c8d8e677991fd1866022c4b0d3a5509657f98d30573b5cdc7dc92429feba4",
+    "module": "reybill"
+  },
+  {
+    "filename": "reybill-icon-selling.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 64323,
+    "sha256": "e4d141327e9b538dfc441bdd4ff868c05df7f21c05d3fcc6467a683c367d1102",
+    "module": "selling"
+  },
+  {
+    "filename": "reybill-icon-settings.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 79551,
+    "sha256": "e9b35d5b02edef5125c9981f82d912cc4371cf916e76dc257d71aa7374106060",
+    "module": "settings"
+  },
+  {
+    "filename": "reybill-icon-share-management.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 62848,
+    "sha256": "5368afabb4eda49d8f0a46c988cab50e20591135254357cd76e879bf585acebc",
+    "module": "share-management"
+  },
+  {
+    "filename": "reybill-icon-stock.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 62294,
+    "sha256": "c06605a4903b8c14eb2b6ea85f19cc1510cff68838f89cdc34c23ad52489a4c4",
+    "module": "stock"
+  },
+  {
+    "filename": "reybill-icon-subcontracting.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 73216,
+    "sha256": "7a7e2516807bc7b64565ced2fcc2059f2e6e9cfc3986274e971b4783ce043184",
+    "module": "subcontracting"
+  },
+  {
+    "filename": "reybill-icon-subscription.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 60811,
+    "sha256": "4886ea8e9d2c915a4b66c3043a6cb04a19d7d5c152c794dfe68e5df2896cd17a",
+    "module": "subscription"
+  },
+  {
+    "filename": "reybill-icon-support.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 69497,
+    "sha256": "612c01d73a05bf14fbb1f223edb7f26ce7f198d373ec25f7df2068bc140f5362",
+    "module": "support"
+  },
+  {
+    "filename": "reybill-icon-taxes.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 71950,
+    "sha256": "fa6d538c3e4ac971132356787ab2266e83b2d3a82bd8e2a6382409e21bbf7c63",
+    "module": "taxes"
+  },
+  {
+    "filename": "reybill-icon-work.png",
+    "extension": ".png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_channel": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_pixels": true,
+    "bytes": 73669,
+    "sha256": "0eb9541a6dd05da050bbba602f5d7dd869063634eb4f89a195d92bbf23a6ba5b",
+    "module": "work"
+  }
+]

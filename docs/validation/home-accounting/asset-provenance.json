@@ -1,0 +1,36 @@
+{
+  "home": {
+    "source": "/home/frappe/reybill-icon-import/reybill-icon-home.png",
+    "production": "reybill_core/public/images/branding/module-icons/reybill-icon-home.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "bytes": 105743,
+    "sha256": "91f1475c5d9590c9814263a19f5c495a44fb5dcb0e4ee744b5191dad3b71587f"
+  },
+  "accounting": {
+    "production": "reybill_core/public/images/branding/module-icons/reybill-icon-accounting.png",
+    "dimensions": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "visible_tile": [
+      36,
+      36,
+      476,
+      476
+    ],
+    "generator": "scripts/build_accounting_icon.py",
+    "components": {
+      "top_left": "reybill-icon-invoicing.png",
+      "top_right": "reybill-icon-payments.png",
+      "bottom_left": "reybill-icon-budget.png",
+      "bottom_right": "reybill-icon-share-management.png"
+    },
+    "template_source": "reybill-icon-work.png",
+    "sha256": "db8fa2ab1bcfbcf3b6c38731479363d9ac6ebd86642ca1af84bdeeec1f6384eb"
+  }
+}

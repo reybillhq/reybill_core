@@ -9,6 +9,7 @@ from reybill_core.branding import (
 	DESKTOP_LABELS,
 	LOGOS,
 	MENU_LABELS,
+	MODULE_ICONS,
 	SIDEBAR_LABELS,
 	SUPPORT_URL,
 )
@@ -23,6 +24,7 @@ def extend_bootinfo(bootinfo):
 		"support_url": SUPPORT_URL,
 		"sidebar_labels": dict(SIDEBAR_LABELS),
 		"navbar_logos": dict(LOGOS),
+		"module_icons": dict(MODULE_ICONS),
 		"about": {
 			"version": __version__,
 			"logos": dict(LOGOS),

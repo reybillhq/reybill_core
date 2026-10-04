@@ -1,0 +1,359 @@
+{
+  "desktop_icons": [
+    {
+      "name": "Accounting",
+      "icon_type": "Folder",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "",
+      "parent_icon": "",
+      "hidden": 0
+    },
+    {
+      "name": "Accounts Setup",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Accounts Setup",
+      "parent_icon": "Accounting",
+      "hidden": 0
+    },
+    {
+      "name": "Assets",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Assets",
+      "parent_icon": "ERPNext",
+      "hidden": 0
+    },
+    {
+      "name": "Banking",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Banking",
+      "parent_icon": "Accounting",
+      "hidden": 0
+    },
+    {
+      "name": "Budget",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Budget",
+      "parent_icon": "Accounting",
+      "hidden": 0
+    },
+    {
+      "name": "Buying",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Buying",
+      "parent_icon": "ERPNext",
+      "hidden": 0
+    },
+    {
+      "name": "CRM",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "CRM",
+      "parent_icon": "ERPNext",
+      "hidden": 0
+    },
+    {
+      "name": "ERPNext Settings",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "ERPNext Settings",
+      "parent_icon": "",
+      "hidden": 0
+    },
+    {
+      "name": "Financial Reports",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Financial Reports",
+      "parent_icon": "Accounting",
+      "hidden": 0
+    },
+    {
+      "name": "Framework",
+      "icon_type": "App",
+      "app": "frappe",
+      "link_type": "External",
+      "link_to": null,
+      "parent_icon": null,
+      "hidden": 0
+    },
+    {
+      "name": "Invoicing",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Invoicing",
+      "parent_icon": "Accounting",
+      "hidden": 0
+    },
+    {
+      "name": "Manufacturing",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Manufacturing",
+      "parent_icon": "ERPNext",
+      "hidden": 0
+    },
+    {
+      "name": "Organization",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Organization",
+      "parent_icon": "",
+      "hidden": 0
+    },
+    {
+      "name": "Payments",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Payments",
+      "parent_icon": "Accounting",
+      "hidden": 0
+    },
+    {
+      "name": "Projects",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Projects",
+      "parent_icon": "ERPNext",
+      "hidden": 0
+    },
+    {
+      "name": "Quality",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Quality",
+      "parent_icon": "ERPNext",
+      "hidden": 0
+    },
+    {
+      "name": "Selling",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Selling",
+      "parent_icon": "ERPNext",
+      "hidden": 0
+    },
+    {
+      "name": "Share Management",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Share Management",
+      "parent_icon": "Accounting",
+      "hidden": 0
+    },
+    {
+      "name": "Stock",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Stock",
+      "parent_icon": "ERPNext",
+      "hidden": 0
+    },
+    {
+      "name": "Subcontracting",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Subcontracting",
+      "parent_icon": "",
+      "hidden": 0
+    },
+    {
+      "name": "Subscription",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Subscription",
+      "parent_icon": "Accounting",
+      "hidden": 0
+    },
+    {
+      "name": "Support",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Support",
+      "parent_icon": "ERPNext",
+      "hidden": 0
+    },
+    {
+      "name": "Taxes",
+      "icon_type": "Link",
+      "app": "erpnext",
+      "link_type": "Workspace Sidebar",
+      "link_to": "Taxes",
+      "parent_icon": "Accounting",
+      "hidden": 0
+    }
+  ],
+  "workspace_records": [
+    {
+      "name": "Assets"
+    },
+    {
+      "name": "Buying"
+    },
+    {
+      "name": "CRM"
+    },
+    {
+      "name": "ERPNext Settings"
+    },
+    {
+      "name": "Financial Reports"
+    },
+    {
+      "name": "Invoicing"
+    },
+    {
+      "name": "Manufacturing"
+    },
+    {
+      "name": "Projects"
+    },
+    {
+      "name": "Quality"
+    },
+    {
+      "name": "Selling"
+    },
+    {
+      "name": "Stock"
+    },
+    {
+      "name": "Subcontracting"
+    },
+    {
+      "name": "Support"
+    }
+  ],
+  "workspace_sidebar_records": [
+    {
+      "name": "Accounts Setup",
+      "app": "erpnext",
+      "module": "Accounts"
+    },
+    {
+      "name": "Assets",
+      "app": "erpnext",
+      "module": "Assets"
+    },
+    {
+      "name": "Banking",
+      "app": "erpnext",
+      "module": "Accounts"
+    },
+    {
+      "name": "Budget",
+      "app": "erpnext",
+      "module": "Accounts"
+    },
+    {
+      "name": "Buying",
+      "app": "erpnext",
+      "module": "Buying"
+    },
+    {
+      "name": "CRM",
+      "app": "erpnext",
+      "module": "CRM"
+    },
+    {
+      "name": "ERPNext Settings",
+      "app": "erpnext",
+      "module": "Setup"
+    },
+    {
+      "name": "Financial Reports",
+      "app": "erpnext",
+      "module": "Accounts"
+    },
+    {
+      "name": "Invoicing",
+      "app": "erpnext",
+      "module": "Accounts"
+    },
+    {
+      "name": "Manufacturing",
+      "app": "erpnext",
+      "module": "Manufacturing"
+    },
+    {
+      "name": "Organization",
+      "app": "erpnext",
+      "module": "Setup"
+    },
+    {
+      "name": "Payments",
+      "app": "erpnext",
+      "module": "Accounts"
+    },
+    {
+      "name": "Projects",
+      "app": "erpnext",
+      "module": "Projects"
+    },
+    {
+      "name": "Quality",
+      "app": "erpnext",
+      "module": "Quality Management"
+    },
+    {
+      "name": "Selling",
+      "app": "erpnext",
+      "module": "Selling"
+    },
+    {
+      "name": "Share Management",
+      "app": "erpnext",
+      "module": "Accounts"
+    },
+    {
+      "name": "Stock",
+      "app": "erpnext",
+      "module": "Stock"
+    },
+    {
+      "name": "Subcontracting",
+      "app": "erpnext",
+      "module": "Buying"
+    },
+    {
+      "name": "Subscription",
+      "app": "erpnext",
+      "module": "Accounts"
+    },
+    {
+      "name": "Support",
+      "app": "erpnext",
+      "module": "Support"
+    },
+    {
+      "name": "Taxes",
+      "app": "erpnext",
+      "module": "Accounts"
+    }
+  ]
+}

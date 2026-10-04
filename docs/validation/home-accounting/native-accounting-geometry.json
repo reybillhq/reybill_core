@@ -1,0 +1,208 @@
+{
+  "1440": {
+    "parent": {
+      "x": 0,
+      "y": 0,
+      "width": 54,
+      "height": 52.9375
+    },
+    "padding": "7px",
+    "columns": "18px 18px 18px 18px 18px 18px",
+    "gap": "2.1px",
+    "children": [
+      {
+        "name": "Invoicing",
+        "icon": {
+          "x": 8,
+          "y": 8,
+          "width": 16,
+          "height": 16
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/invoicing.svg"
+      },
+      {
+        "name": "Payments",
+        "icon": {
+          "x": 28.09375,
+          "y": 8,
+          "width": 16,
+          "height": 16
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/payments.svg"
+      },
+      {
+        "name": "Financial Reports",
+        "icon": {
+          "x": 48.1875,
+          "y": 8,
+          "width": 16,
+          "height": 16
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/financial_reports.svg"
+      },
+      {
+        "name": "Accounts Setup",
+        "icon": {
+          "x": 68.28125,
+          "y": 8,
+          "width": 16,
+          "height": 16
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/accounts_setup.svg"
+      },
+      {
+        "name": "Taxes",
+        "icon": {
+          "x": 88.375,
+          "y": 8,
+          "width": 16,
+          "height": 16
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/taxes.svg"
+      },
+      {
+        "name": "Banking",
+        "icon": {
+          "x": 108.46875,
+          "y": 8,
+          "width": 16,
+          "height": 16
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/banking.svg"
+      },
+      {
+        "name": "Budget",
+        "icon": {
+          "x": 8,
+          "y": 28.09375,
+          "width": 16,
+          "height": 16
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/budget.svg"
+      },
+      {
+        "name": "Share Management",
+        "icon": {
+          "x": 28.09375,
+          "y": 28.09375,
+          "width": 16,
+          "height": 16
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/share_management.svg"
+      },
+      {
+        "name": "Subscription",
+        "icon": {
+          "x": 48.1875,
+          "y": 28.09375,
+          "width": 16,
+          "height": 16
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/subscription.svg"
+      }
+    ]
+  },
+  "390": {
+    "parent": {
+      "x": 0,
+      "y": 0,
+      "width": 50,
+      "height": 50
+    },
+    "padding": "7px",
+    "columns": "17px 17px",
+    "gap": "2.1px",
+    "children": [
+      {
+        "name": "Invoicing",
+        "icon": {
+          "x": 8,
+          "y": 8,
+          "width": 15,
+          "height": 15
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/invoicing.svg"
+      },
+      {
+        "name": "Payments",
+        "icon": {
+          "x": 27.09375,
+          "y": 8,
+          "width": 15,
+          "height": 15
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/payments.svg"
+      },
+      {
+        "name": "Financial Reports",
+        "icon": {
+          "x": 8,
+          "y": 27.09375,
+          "width": 15,
+          "height": 15
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/financial_reports.svg"
+      },
+      {
+        "name": "Accounts Setup",
+        "icon": {
+          "x": 27.09375,
+          "y": 27.09375,
+          "width": 15,
+          "height": 15
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/accounts_setup.svg"
+      },
+      {
+        "name": "Taxes",
+        "icon": {
+          "x": 8,
+          "y": 46.1875,
+          "width": 15,
+          "height": 15
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/taxes.svg"
+      },
+      {
+        "name": "Banking",
+        "icon": {
+          "x": 27.09375,
+          "y": 46.1875,
+          "width": 15,
+          "height": 15
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/banking.svg"
+      },
+      {
+        "name": "Budget",
+        "icon": {
+          "x": 8,
+          "y": 65.28125,
+          "width": 15,
+          "height": 15
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/budget.svg"
+      },
+      {
+        "name": "Share Management",
+        "icon": {
+          "x": 27.09375,
+          "y": 65.28125,
+          "width": 15,
+          "height": 15
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/share_management.svg"
+      },
+      {
+        "name": "Subscription",
+        "icon": {
+          "x": 8,
+          "y": 84.375,
+          "width": 15,
+          "height": 15
+        },
+        "image": "/assets/erpnext/icons/desktop_icons/solid/subscription.svg"
+      }
+    ]
+  }
+}

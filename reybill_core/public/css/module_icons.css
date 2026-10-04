@@ -1,0 +1,35 @@
+/* The approved PNG includes its tile and intentional transparent canvas. */
+.desktop-icon > .icon-container.reybill-module-icon {
+	background: transparent !important;
+	box-shadow: none;
+	padding: 0;
+	border-radius: 0;
+	overflow: visible;
+}
+
+.desktop-icon > .icon-container.reybill-module-icon > img.reybill-module-image {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	filter: none;
+}
+
+/* Native sidebar headers consume the same mapped Desktop asset lookup. */
+.body-sidebar
+	.sidebar-header
+	.sidebar-item-icon:has(img[src*="/assets/reybill_core/images/branding/module-icons/"]) {
+	background: transparent !important;
+}
+
+.body-sidebar .sidebar-header img[src*="/assets/reybill_core/images/branding/module-icons/"],
+.context-menu img[src*="/assets/reybill_core/images/branding/module-icons/"] {
+	object-fit: contain;
+	filter: none;
+}
+
+.workspace-icon > img.reybill-workspace-module-image {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	filter: none;
+}

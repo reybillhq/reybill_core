@@ -1,0 +1,36 @@
+{
+  "standard_record_table_sha256": {
+    "Desktop Icon": "b2d6addcfb229e573674c5df21efca9d486ea4f530f49aa94394a00712385952",
+    "Desktop Layout": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "Workspace": "6037488c4c7516b2d0abd3f4062acf1bb11912d8b75538b2c73da23ba5b51299",
+    "Workspace Sidebar": "e2624005144e1171fd2a998db66020aedeed1e45e6c44c7712182d177409a685",
+    "Navbar Item": "33633cf6cd311a72cab6af095ae0ad91591633fb4cbdb03d3d51d23d452e0cff",
+    "Has Role": "b854ffb4014c5e5af44adb2c09345153efb9d98e89ee799f7f4058cee3d3de4d"
+  },
+  "all_six_standard_tables_unchanged": true,
+  "desktop_layout_count_after": 0,
+  "unchanged_assets": 32,
+  "unchanged_module_pngs": 25,
+  "approved_reybill_png_sha256": "955c8d8e677991fd1866022c4b0d3a5509657f98d30573b5cdc7dc92429feba4",
+  "upstream": {
+    "frappe": {
+      "unchanged_tracked_files": 3767,
+      "status": "",
+      "unchanged": true
+    },
+    "erpnext": {
+      "unchanged_tracked_files": 5189,
+      "status": " M banking/yarn.lock\n",
+      "unchanged": true
+    }
+  },
+  "existing_files_changed_by_this_delta": [
+    "tests/validate_module_icons.py",
+    "docs/REYBILL_MODULE_ICONS.md",
+    "docs/BRANDING_ASSETS.md",
+    "reybill_core/branding.py"
+  ],
+  "layout_save_delete_reset_invoked": false,
+  "migration_or_build_invoked": false,
+  "cache_cleared": true
+}

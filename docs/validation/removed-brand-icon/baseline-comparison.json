@@ -1,0 +1,24 @@
+{
+  "previous_url": "/assets/reybill_core/images/branding/Reybill_desk_icon.png?v=1.0.0&h=c2b0e400d772",
+  "new_url": "/assets/reybill_core/images/branding/module-icons/reybill-icon-reybill.png?v=1.0.0&h=955c8d8e6779",
+  "six_states_callback_and_hidden_state_comparison": true,
+  "no_new_console_error_categories": true,
+  "baseline_console_count": 24,
+  "after_console_count": 26,
+  "existing_console_errors": [
+    {
+      "text": "Error connecting to socket.io: xhr poll error",
+      "path": "/assets/frappe/dist/js/desk.bundle.PI73WHHS.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (NOT FOUND)",
+      "path": "/socket.io/"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (NOT FOUND)",
+      "path": "/undefined"
+    }
+  ],
+  "layout_write_requests": 0,
+  "reset_invoked": false
+}

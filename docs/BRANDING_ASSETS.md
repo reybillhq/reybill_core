@@ -176,3 +176,9 @@ All official asset bytes are unchanged. Historical release notes above remain
 as evidence of the previous sizing decision.
 
 [Major base release validation](validation/v1.0.0/RELEASE_VALIDATION.md).
+
+## Approved module icon family after v1.0.0
+
+The 23 approved PNGs from `/home/frappe/reybill-icon-import/` are copied byte-for-byte into `reybill_core/public/images/branding/module-icons/`. Their exact filenames, dimensions, alpha status, hashes, stable-identity map and rendering rules are documented in [REYBILL_MODULE_ICONS.md](REYBILL_MODULE_ICONS.md). They use the existing version/content-hash URL constructor. The newly approved Home PNG is now used; Workspace remains native. The removed ReyBill application tile now displays the approved `reybill-icon-reybill.png` through the existing stable `ERPNext` presentation mapping; its removed state is unchanged. The legacy `Reybill_desk_icon.png` remains intact, as do persistent records and setup logic. These PNGs have their own approved pale tile and are never recolored or inverted for dark mode.
+
+The targeted Accounting correction adds `module-icons/reybill-icon-accounting.png`: a dedicated 512px raster composite using the native desktop's Invoicing, Payments, Budget and Share Management identities, with one existing ReyBill tile frame. It is an explicitly requested new composite, not a replacement/redraw of any supplied child icon. `module-icons/reybill-icon-home.png` is copied byte-for-byte from the new approved Home import. See [Home / Accounting validation](validation/home-accounting/README.md).

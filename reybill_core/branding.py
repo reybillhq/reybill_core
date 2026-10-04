@@ -64,6 +64,38 @@ DESKTOP_ORDER = (
 )
 REYBILL_DESKTOP_ICON = branding_asset_url("images/branding/Reybill_desk_icon.png")
 
+# Original Desktop Icon document names; never translated labels or saved-layout data.
+# Accounting stays a native Folder; its dedicated artwork preserves the composite.
+MODULE_ICONS = {
+	"Framework": branding_asset_url("images/branding/module-icons/reybill-icon-work.png"),
+	"ERPNext": branding_asset_url("images/branding/module-icons/reybill-icon-reybill.png"),
+	"Home": branding_asset_url("images/branding/module-icons/reybill-icon-home.png"),
+	"Organization": branding_asset_url("images/branding/module-icons/reybill-icon-organization.png"),
+	"Accounting": branding_asset_url("images/branding/module-icons/reybill-icon-accounting.png"),
+	"Assets": branding_asset_url("images/branding/module-icons/reybill-icon-assets.png"),
+	"Buying": branding_asset_url("images/branding/module-icons/reybill-icon-buying.png"),
+	"CRM": branding_asset_url("images/branding/module-icons/reybill-icon-crm.png"),
+	"Manufacturing": branding_asset_url("images/branding/module-icons/reybill-icon-manufacturing.png"),
+	"Projects": branding_asset_url("images/branding/module-icons/reybill-icon-projects.png"),
+	"Quality": branding_asset_url("images/branding/module-icons/reybill-icon-quality.png"),
+	"Selling": branding_asset_url("images/branding/module-icons/reybill-icon-selling.png"),
+	"Stock": branding_asset_url("images/branding/module-icons/reybill-icon-stock.png"),
+	"Support": branding_asset_url("images/branding/module-icons/reybill-icon-support.png"),
+	"Subcontracting": branding_asset_url("images/branding/module-icons/reybill-icon-subcontracting.png"),
+	"ERPNext Settings": branding_asset_url("images/branding/module-icons/reybill-icon-settings.png"),
+	"Accounts Setup": branding_asset_url("images/branding/module-icons/reybill-icon-accounts-setup.png"),
+	"Banking": branding_asset_url("images/branding/module-icons/reybill-icon-banking.png"),
+	"Budget": branding_asset_url("images/branding/module-icons/reybill-icon-budget.png"),
+	"Financial Reports": branding_asset_url(
+		"images/branding/module-icons/reybill-icon-financial-reports.png"
+	),
+	"Invoicing": branding_asset_url("images/branding/module-icons/reybill-icon-invoicing.png"),
+	"Payments": branding_asset_url("images/branding/module-icons/reybill-icon-payments.png"),
+	"Share Management": branding_asset_url("images/branding/module-icons/reybill-icon-share-management.png"),
+	"Subscription": branding_asset_url("images/branding/module-icons/reybill-icon-subscription.png"),
+	"Taxes": branding_asset_url("images/branding/module-icons/reybill-icon-taxes.png"),
+}
+
 SIDEBAR_LABELS = {
 	"ERPNext": "ReyBill",
 	"Frappe Framework": "ReyBill Framework",
