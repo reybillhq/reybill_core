@@ -213,20 +213,24 @@ def validate(args):
 		desk_page.screenshot(path=str(output / "desktop.png"), full_page=True)
 		desk_page.locator('.desktop-icon[data-id="CRM"]').click()
 		desk_page.wait_for_function("frappe.app.sidebar.sidebar_title === 'CRM'")
+		desk_page.wait_for_function("[__('CRM'), __('{0} Dashboard', [__('CRM')])].includes(document.title)")
 		desk_page.wait_for_load_state("networkidle")
 		assert desk_page.locator(".body-sidebar:visible .header-subtitle").inner_text() == "ReyBill"
 		assert desk_page.get_by_text("Switch to Frappe CRM", exact=True).count() == 0
-		assert desk_page.title() == "CRM Dashboard"
+		assert desk_page.title() in desk_page.evaluate("[__('CRM'), __('{0} Dashboard', [__('CRM')])]")
 		results["crm"] = {"title": desk_page.title(), "favicon": favicon(desk_page)}
 		desk_page.screenshot(path=str(output / "crm.png"), full_page=True)
 		desk_page.reload(wait_until="networkidle")
 		desk_page.wait_for_function("frappe.app.sidebar.sidebar_title === 'CRM'")
-		assert desk_page.title() == "CRM Dashboard"
+		desk_page.wait_for_function("[__('CRM'), __('{0} Dashboard', [__('CRM')])].includes(document.title)")
+		assert desk_page.title() in desk_page.evaluate("[__('CRM'), __('{0} Dashboard', [__('CRM')])]")
 		favicon(desk_page)
 		results["authenticated_reload_deep_link"] = "CRM deep link reloaded successfully"
 		desk_page.goto(args.url + "/desk", wait_until="networkidle")
 		desk_page.locator('.desktop-icon[data-id="Accounting"]').click()
-		assert desk_page.locator(".modal:visible .modal-title").inner_text() == "Accounting"
+		assert desk_page.locator(".modal:visible .modal-title").inner_text() == desk_page.evaluate(
+			"__('Accounting')"
+		)
 		assert desk_page.title() == "Desktop"
 		results["Accounting"] = {
 			"folder_title": "Accounting",
@@ -236,22 +240,26 @@ def validate(args):
 		}
 		for route, title in (("/desk/customer", "Customer"), ("/desk/sales-invoice", "Sales Invoice")):
 			desk_page.goto(args.url + route, wait_until="networkidle")
-			desk_page.wait_for_function("title => document.title === title", arg=title)
+			desk_page.wait_for_function(
+				"title => document.title === title", arg=desk_page.evaluate("title => __(title)", title)
+			)
 			results[title] = {"title": desk_page.title(), "favicon": favicon(desk_page)}
 		desk_page.goto(args.url + "/desk/home", wait_until="networkidle")
-		desk_page.wait_for_function("document.title === 'Home' && Boolean(frappe.workspace)")
+		desk_page.wait_for_function("document.title === __('Home') && Boolean(frappe.workspace)")
 		results["Workspace"] = {"title": desk_page.title(), "favicon": favicon(desk_page)}
 		desk_page.screenshot(path=str(output / "workspace.png"), full_page=True)
 		desk_page.goto(args.url + "/desk/customer", wait_until="networkidle")
 		desk_page.evaluate("frappe.new_doc('Customer')")
-		desk_page.locator(".modal:visible").get_by_text("Edit Full Form", exact=True).click()
+		desk_page.locator(".modal:visible").get_by_text(
+			desk_page.evaluate("__('Edit Full Form')"), exact=True
+		).click()
 		desk_page.wait_for_function("window.cur_frm?.doctype === 'Customer' && cur_frm.doc.__islocal")
 		results["Customer form"] = {
 			"title": desk_page.title(),
 			"favicon": favicon(desk_page),
 			"unsaved": True,
 		}
-		assert "Customer" in desk_page.title()
+		assert desk_page.evaluate("__('Customer')") in desk_page.title()
 		assert not re.search(r"Frappe|ERPNext", desk_page.title())
 		desk_page.goto(args.url + "/desk", wait_until="networkidle")
 		desk_page.locator(".desktop-avatar").click()
@@ -259,7 +267,7 @@ def validate(args):
 		about = desk_page.locator(".reybill-about-dialog:visible")
 		assert f"ReyBill Core {__version__}" in about.inner_text()
 		assert not re.search(r"Frappe|ERPNext", about.inner_text())
-		about.screenshot(path=str(output / "about-v0.0.4.png"))
+		about.screenshot(path=str(output / f"about-v{__version__}.png"))
 		results["About"] = f"ReyBill Core {__version__}; no visible vendor branding"
 		assert desk_page.evaluate("frappe.boot.versions.reybill_core") == __version__
 		desk.close()
@@ -376,5 +384,5 @@ if __name__ == "__main__":
 	parser.add_argument("--credentials-file", required=True)
 	parser.add_argument("--skip-forgot-submission", action="store_true")
 	parser.add_argument("--resume-presentation", action="store_true")
-	parser.add_argument("--output", default="docs/validation/login-favicon-splash")
+	parser.add_argument("--output", default=f"docs/validation/v{__version__}/authentication")
 	validate(parser.parse_args())

@@ -1,6 +1,15 @@
 ### ReyBill Core
 
-Core branding and platform integration for ReyBill
+Core branding and platform integration for ReyBill.
+
+ReyBill Core **v1.0.0** is the first stable base for Frappe Framework v16 and
+ERPNext v16. It includes Desktop naming/order, CRM and Help branding, ReyBill
+About/Support, native Login/Forgot/Reset branding, favicon, app identity,
+versioned official assets, SVG splash/fallback and theme-aware Desk logo.
+Technical framework/app identities and ERP behavior remain intact.
+
+See [release validation and known responsive observations](docs/validation/v1.0.0/RELEASE_VALIDATION.md)
+and the [white-label audit](docs/WHITE_LABEL_AUDIT.md).
 
 ### Installation
 

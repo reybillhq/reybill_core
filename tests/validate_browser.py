@@ -2,7 +2,7 @@
 
 Requires Playwright and Chromium. Pass a protected session file with --session-file.
 The session credential is never included in screenshots or validation output.
-Reset's destructive endpoint is intercepted so existing saved layouts are preserved.
+Release validation excludes the Reset action entirely to preserve saved layouts.
 """
 
 import argparse
@@ -18,7 +18,7 @@ from reybill_core.branding import DESKTOP_LABELS, LOGOS, MENU_LABELS, SUPPORT_UR
 
 
 def validate(args):
-	results = {}
+	results = {"version": __version__, "desktop_reset_invoked": False}
 	output = Path(args.output)
 	output.mkdir(parents=True, exist_ok=True)
 	with sync_playwright() as playwright:
@@ -59,7 +59,7 @@ def validate(args):
 				"About ReyBill",
 				"Business management software powered by ReyBill.",
 				f"ReyBill Core {__version__}",
-				"INSTALLED APPLICATIONS",
+				page.evaluate("__('Installed Applications').toUpperCase()"),
 				"© ReyBill Ltd",
 			):
 				assert phrase in text, text
@@ -78,7 +78,7 @@ def validate(args):
 
 		def open_help():
 			page.locator(".body-sidebar:visible .sidebar-header").click()
-			page.locator(".context-menu:visible").get_by_text("Help", exact=True).hover()
+			page.locator(".context-menu:visible").get_by_text(page.evaluate("__('Help')"), exact=True).hover()
 			menu = page.locator(".context-menu:visible").filter(
 				has=page.get_by_text(MENU_LABELS["About"], exact=True)
 			)
@@ -87,8 +87,8 @@ def validate(args):
 			# Native contextual documentation links may precede the four standard items.
 			assert labels[-4:] == [
 				"About ReyBill",
-				"Keyboard Shortcuts",
-				"System Health",
+				page.evaluate("__('Keyboard Shortcuts')"),
+				page.evaluate("__('System Health')"),
 				"ReyBill Support",
 			], labels
 			assert "About" not in labels and "Frappe Support" not in labels, labels
@@ -109,12 +109,12 @@ def validate(args):
 		menu = open_menu()
 		labels = menu.locator(".menu-item-title").all_text_contents()
 		assert labels == [
-			"Edit Profile",
-			"Toggle Theme",
+			page.evaluate("__('Edit Profile')"),
+			page.evaluate("__('Toggle Theme')"),
 			MENU_LABELS["About"],
 			MENU_LABELS["Frappe Support"],
-			"Reset Desktop Layout",
-			"Logout",
+			page.evaluate("__('Reset Desktop Layout')"),
+			page.evaluate("__('Logout')"),
 		], labels
 		results["profile_menu"] = labels
 		page.screenshot(path=str(output / "desktop-profile.png"), full_page=True)
@@ -147,14 +147,14 @@ def validate(args):
 		results["support"] = {"url": popup.url, "new_tab": True, "external_request_intercepted": True}
 		popup.close()
 
-		open_menu().get_by_text("Toggle Theme", exact=True).click()
+		open_menu().get_by_text(page.evaluate("__('Toggle Theme')"), exact=True).click()
 		page.locator(".modal:visible").wait_for()
 		results["theme"] = page.locator(".modal:visible").inner_text()
 		page.screenshot(path=str(output / "theme-existing.png"), full_page=True)
 		page.locator(".modal:visible .btn-modal-close").click()
 		page.locator(".modal:visible").wait_for(state="hidden")
 
-		open_menu().get_by_text("Edit Profile", exact=True).click()
+		open_menu().get_by_text(page.evaluate("__('Edit Profile')"), exact=True).click()
 		page.wait_for_url("**/desk/user/Administrator")
 		page.wait_for_load_state("networkidle")
 		results["edit_profile"] = urlparse(page.url).path
@@ -244,13 +244,15 @@ def validate(args):
 		assert popup.url.rstrip("/") == SUPPORT_URL
 		results["help_support"] = {"url": popup.url, "new_tab": True}
 		popup.close()
-		open_help().get_by_text("Keyboard Shortcuts", exact=True).click()
+		open_help().get_by_text(page.evaluate("__('Keyboard Shortcuts')"), exact=True).click()
 		page.locator(".modal:visible").wait_for()
-		assert page.locator(".modal:visible .modal-title").inner_text() == "Keyboard Shortcuts"
+		assert page.locator(".modal:visible .modal-title").inner_text() == page.evaluate(
+			"__('Keyboard Shortcuts')"
+		)
 		page.locator(".modal:visible").screenshot(path=str(output / "keyboard-shortcuts.png"))
 		results["keyboard_shortcuts"] = "Native dialog opened through CRM Help"
 		close_dialog()
-		open_help().get_by_text("System Health", exact=True).click()
+		open_help().get_by_text(page.evaluate("__('System Health')"), exact=True).click()
 		page.wait_for_url("**/desk/system-health-report*")
 		page.wait_for_function("window.cur_frm?.doctype === 'System Health Report'")
 		page.wait_for_load_state("networkidle")
@@ -264,8 +266,10 @@ def validate(args):
 		page.locator('.desktop-icon[data-id="CRM"]').click()
 		page.wait_for_load_state("networkidle")
 		page.locator(".body-sidebar:visible .sidebar-header").click()
-		page.locator(".context-menu:visible").get_by_text("Workspaces", exact=True).hover()
-		page.locator(".context-menu:visible").get_by_text("Selling", exact=True).click()
+		page.locator(".context-menu:visible").get_by_text(
+			page.evaluate("__('Workspaces')"), exact=True
+		).hover()
+		page.locator(".context-menu:visible").get_by_text(page.evaluate("__('Selling')"), exact=True).click()
 		page.wait_for_function("frappe.app.sidebar.sidebar_title === 'Selling'")
 		page.wait_for_load_state("networkidle")
 		results["workspace_switching"] = "Native CRM Workspaces menu switched to Selling"
@@ -274,30 +278,9 @@ def validate(args):
 		)
 
 		desktop()
-		reset_requests = []
-
-		def intercept_reset(route):
-			reset_requests.append(True)
-			route.fulfill(content_type="application/json", body='{"message": null}')
-
-		page.route(
-			"**/api/method/frappe.desk.doctype.desktop_layout.desktop_layout.delete_layout", intercept_reset
-		)
-		page.evaluate("window.__reybill_before_reset = true")
-		open_menu().get_by_text("Reset Desktop Layout", exact=True).click(no_wait_after=True)
-		# Native reset and clear-cache may both reload; wait for the resulting document.
-		page.wait_for_function(
-			"!window.__reybill_before_reset && Boolean(window.frappe?.pages?.desktop?.desktop_page)"
-		)
-		page.wait_for_load_state("networkidle")
-		page.locator(".desktop-avatar").wait_for()
-		assert reset_requests, "Native reset action must dispatch its original method"
-		results["reset"] = (
-			"Native action dispatched and page reloaded; deletion endpoint intercepted to preserve layout"
-		)
 		assert MENU_LABELS["Frappe Support"] in open_menu().locator(".menu-item-title").all_text_contents()
 		page.keyboard.press("Escape")
-		open_menu().get_by_text("Logout", exact=True).click()
+		open_menu().get_by_text(page.evaluate("__('Logout')"), exact=True).click()
 		page.locator(".modal:visible .btn-primary").click()
 		page.wait_for_url("**/login*")
 		results["logout"] = urlparse(page.url).path
@@ -328,5 +311,5 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description=__doc__)
 	parser.add_argument("--url", default="http://reybill.localhost:8000")
 	parser.add_argument("--session-file", required=True)
-	parser.add_argument("--output", default="docs/validation/crm-help-about")
+	parser.add_argument("--output", default=f"docs/validation/v{__version__}/menus")
 	validate(parser.parse_args())

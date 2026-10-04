@@ -140,7 +140,7 @@ image-response SHA-256 match. The source hash still matches the prior milestone
 review; no different replacement bytes were present in this directory during
 this check.
 
-## Final Desktop logo sizing: native Frappe v16
+## Historical v0.0.4 Desktop logo sizing: native Frappe v16
 
 All ReyBill navbar sizing experiments, including the 320 × 150 rule and its
 mobile override, were removed at the user's final release instruction.
@@ -157,3 +157,22 @@ dark, including live native theme switching and reloads. Logo assets and other
 Desktop artwork remain unchanged.
 
 [Focused cache/sizing validation](validation/login-favicon-splash/BRANDING_FIXES.md).
+
+## v1.0.0 stable base: approved 150px Desk logo
+
+The first major base release includes the subsequently approved
+`desk_navbar_logo.css` through the versioned `app_include_css` hook.
+`.navbar-home img` uses `height: 150px`, `width: auto !important`, and
+`object-fit: contain`. The official 1024 × 768 SVG computes to 200 × 150 pixels.
+The native navbar remains 52px tall; no container, Desktop icon, ordering or
+navigation changes accompany this sizing rule. Black/white source switching
+continues through the existing native theme adapter.
+
+The centered wordmark is visible, but the transparent SVG canvas extends below
+the navbar. At 390px the Search contents can wrap outside their button; at
+390px and 430px the transparent image box overlaps the upper first-icon region.
+These approved observations are retained for a later responsive milestone.
+All official asset bytes are unchanged. Historical release notes above remain
+as evidence of the previous sizing decision.
+
+[Major base release validation](validation/v1.0.0/RELEASE_VALIDATION.md).

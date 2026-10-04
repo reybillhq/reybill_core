@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "frappe_tracked_files_unchanged": 3767,
+  "erpnext_tracked_files_unchanged": 5189,
+  "preexisting_core_changes": [
+    "erpnext/banking/yarn.lock (unchanged from pre-milestone baseline)"
+  ],
+  "core_staged_files": [],
+  "saved_layouts_unchanged": true,
+  "protected_record_fingerprints_unchanged": true,
+  "desktop_reset_invoked": false,
+  "migration_or_full_setup_invoked": false,
+  "temporary_user_session_credentials_removed": true,
+  "historical_tags_unchanged": true,
+  "official_asset_sha256": {
+    "reybill_core/public/animations/Splash_color_logo_gradient_loop.json": "09e72f8e32f90265a6ba312ee23deb867dcf21847851c0bb6315107779b7d315",
+    "reybill_core/public/animations/Splash_color_logo_gradient_loop.svg": "bcc0580b43b79ffe7fcc50416a5e9b33addce3947e347081efd307f118e1eb8d",
+    "reybill_core/public/images/branding/Reybill_desk_icon.png": "c2b0e400d772a7c00450580b3a2595aff9d8d62f08f9794fbc8a2ca51857860e",
+    "reybill_core/public/images/branding/reybill-icon-black.png": "987fe5b3db29a66ec163658b63b87eb49bcc1a7ab5e5e29d11601cd2d9cc396e",
+    "reybill_core/public/images/branding/reybill-icon-white.png": "88cc491247c4e2aa960357cba87b1a008ac14c180fdeef4d63ca2a9657a33fbc",
+    "reybill_core/public/images/branding/reybill-logo-black.svg": "62f8ac4f504211e11efe5279c98b69904daa25d9954f35ba0dff3321a6a743ac",
+    "reybill_core/public/images/branding/reybill-logo-white.svg": "d2040b692c56636cca374c054ae3e80fb56c043b4262e65589a037126d12f129"
+  },
+  "package_metadata_version": "1.0.0",
+  "python_tests_passed": 9,
+  "javascript_tests_passed": 5,
+  "ruff_eslint_prettier_passed": true
+}

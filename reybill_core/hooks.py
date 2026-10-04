@@ -1,3 +1,5 @@
+from reybill_core.branding import branding_asset_url
+
 app_name = "reybill_core"
 app_title = "ReyBill Core"
 app_publisher = "ReyBill Ltd"
@@ -13,6 +15,7 @@ update_website_context = "reybill_core.website.update_website_context"
 after_install = "reybill_core.setup.apply_branding"
 after_migrate = "reybill_core.setup.apply_branding"
 web_include_css = ["/assets/reybill_core/css/login_branding.css"]
+app_include_css = [branding_asset_url("css/desk_navbar_logo.css")]
 jinja = {"methods": ["reybill_core.website.get_splash_config"]}
 app_include_js = [
 	"/assets/reybill_core/js/about.js",

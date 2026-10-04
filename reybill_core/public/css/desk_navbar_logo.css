@@ -1,0 +1,6 @@
+/* Keep the official SVG aspect ratio and native navbar structure. */
+.navbar-home img {
+	height: 150px;
+	width: auto !important;
+	object-fit: contain;
+}

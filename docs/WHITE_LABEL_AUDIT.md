@@ -1,8 +1,23 @@
-# ReyBill white-label audit — v0.0.4 Login / favicon / splash
+# ReyBill white-label audit — v1.0.0 stable base
 
 Audit date: 2026-10-04. Site: `reybill.localhost`. Installed source: Frappe 16.36.1 and ERPNext 16.37.0.
 
-## Scope and evidence
+## v1.0.0 release addendum
+
+The approved current base reports **ReyBill Core 1.0.0** in the ReyBill-owned
+About dialog. Package versioning also updates owned branding asset cache keys.
+The Desk logo now uses the approved `.navbar-home img` 150px height and automatic
+width rule; native navbar height and existing black/white theme switching remain
+intact. The known 390px Search wrapping and 390px/430px transparent logo overlap
+are preserved and recorded in the [release validation](validation/v1.0.0/RELEASE_VALIDATION.md).
+Saved Desktop layouts are neither reset nor modified for this release.
+
+The inventories and v0.0.4 findings below remain historical evidence. Outstanding
+customer surfaces and classifications are unchanged; promotion to a stable base
+does not authorize further white-label changes. In particular, the authenticator
+issuer remains **Frappe Framework — NEEDS REVIEW**.
+
+## Scope and evidence (historical v0.0.4)
 
 This is an inventory, not authorization to implement all remaining surfaces. The v0.0.2 and v0.0.3 milestones supplied Desktop/menu naming, CRM sidebar presentation, removal of the external CRM promotion, and a ReyBill-owned About dialog. The approved v0.0.4 milestone adds native authentication-screen branding, a ReyBill favicon, display app names and an official animated SVG splash with static fallback. Website Settings' `app_name`, `app_logo`, `favicon`, `splash_image`, and System Settings' display `app_name` are persistently updated. The explicitly approved Desktop addition sets native icon/layout indices, Home/CRM/Support default visibility and the removed ReyBill record's artwork URL; all other record fields remain intact. Core source, Workspace/Navbar records, app metadata, authentication configuration, workflows, permissions and routes remain untouched. The final navbar logo uses native Frappe sizing with ReyBill source switching only. No general color/layout redesign or animation dependency is included. ReyBill Core reports version 0.0.4.
 

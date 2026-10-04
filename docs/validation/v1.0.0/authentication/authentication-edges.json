@@ -1,0 +1,20 @@
+{
+  "forgot_password_submission": {
+    "status": 200,
+    "generic_response": true,
+    "unregistered_address": true,
+    "no_email_sent": true
+  },
+  "invalid_password": {
+    "status": 401,
+    "native_error_message": "Invalid credentials, try again.",
+    "raw_javascript_visible": false
+  },
+  "enter_submit": {
+    "native_password_login": true,
+    "redirect": "/desk",
+    "status": 200
+  },
+  "logout_after_enter_submit": true,
+  "page_errors": []
+}
