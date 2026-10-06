@@ -11,6 +11,7 @@ from reybill_core.branding import (
 	SPLASH_ANIMATION,
 	SPLASH_FALLBACK,
 	SUPPORT_URL,
+	branding_asset_url,
 )
 
 
@@ -36,6 +37,12 @@ def update_website_context(context):
 		context["body_class"] = " ".join(classes)
 		if template == "www/login.html":
 			context["title"] = LOGIN_TITLE
+			# Use native web CSS context only here; leave public/reset routes unchanged.
+			stylesheet = branding_asset_url("css/reybill_theme.css")
+			includes = list(context.get("web_include_css") or [])
+			if stylesheet not in includes:
+				includes.append(stylesheet)
+			context["web_include_css"] = includes
 	if template == "www/desk.html":
 		context["app_name"] = PRODUCT_NAME
 		context["favicon"] = FAVICON

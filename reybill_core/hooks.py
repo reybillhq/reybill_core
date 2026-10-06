@@ -18,6 +18,7 @@ web_include_css = ["/assets/reybill_core/css/login_branding.css"]
 app_include_css = [
 	branding_asset_url("css/desk_navbar_logo.css"),
 	branding_asset_url("css/module_icons.css"),
+	branding_asset_url("css/reybill_theme.css"),
 ]
 jinja = {"methods": ["reybill_core.website.get_splash_config"]}
 app_include_js = [
