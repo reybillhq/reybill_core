@@ -1,0 +1,472 @@
+/* Experimental Desk colors. Remove this file and its hook to disable the pass.
+   Preserve native geometry, surfaces, typography, SVG sources and semantic colors. */
+:root,
+[data-theme="light"] {
+	--reybill-primary: #74003a;
+	--reybill-primary-hover: #680034;
+	--reybill-primary-active: #5c002e;
+	--reybill-primary-soft: #faf2f6;
+	--reybill-primary-border: #f1d8e2;
+	--reybill-secondary-active: #e2a9bf;
+	--reybill-control-accent: var(--reybill-primary);
+	--reybill-interactive-fg: var(--reybill-primary);
+	--reybill-interactive-hover: var(--reybill-primary-hover);
+	--reybill-interactive-active: var(--reybill-primary-active);
+	--reybill-text: #101828;
+	--reybill-text-secondary: #475467;
+	--reybill-text-muted: #667085;
+	--reybill-hover-surface: #f9fafb;
+	--reybill-focus-color: rgba(116, 0, 58, 0.12);
+}
+
+[data-theme="dark"] {
+	--reybill-primary: #a82e68;
+	--reybill-primary-hover: #98265c;
+	--reybill-primary-active: #861b4d;
+	--reybill-primary-soft: #2b1b23;
+	--reybill-primary-border: #54303f;
+	--reybill-secondary-active: #643b50;
+	--reybill-control-accent: #c9538b;
+	/* Lighter text on dark selected rows maintains AA contrast. */
+	--reybill-interactive-fg: #e6a3c2;
+	--reybill-interactive-hover: #f3c0d9;
+	--reybill-interactive-active: #f7d3e3;
+	--reybill-text: var(--text-color);
+	--reybill-text-secondary: var(--text-light);
+	--reybill-text-muted: var(--text-muted);
+	--reybill-hover-surface: var(--fg-hover-color);
+	--reybill-focus-color: rgba(168, 46, 104, 0.24);
+}
+
+/* Native sidebar surface and active-row geometry remain entirely native. */
+.body-sidebar {
+	--sidebar-hover-color: var(--reybill-hover-surface);
+	--sidebar-active-color: var(--reybill-primary-soft);
+}
+
+.body-sidebar .standard-sidebar-item {
+	--icon-stroke: var(--reybill-text-secondary);
+}
+
+.body-sidebar .standard-sidebar-item .item-anchor:not(.section-break),
+.body-sidebar .header-title {
+	color: var(--reybill-text);
+}
+
+.body-sidebar .header-subtitle {
+	color: var(--reybill-text-muted);
+}
+
+.body-sidebar .standard-sidebar-item.active-sidebar {
+	--icon-stroke: var(--reybill-interactive-fg);
+	background-color: var(--reybill-primary-soft);
+}
+
+.body-sidebar .standard-sidebar-item.active-sidebar .item-anchor,
+.body-sidebar .standard-sidebar-item.active-sidebar .sidebar-item-control {
+	color: var(--reybill-interactive-fg);
+}
+
+/* Native menus stay neutral; only existing selected/current states get tint. */
+.frappe-menu {
+	--sidebar-hover-color: var(--reybill-hover-surface);
+}
+
+.frappe-menu .dropdown-menu-item:is(.selected, .active),
+.frappe-menu .dropdown-menu-item:has(> a[aria-current="page"]),
+.dropdown-menu .dropdown-item.active:not(.text-danger) {
+	--icon-stroke: var(--reybill-interactive-fg);
+	background-color: var(--reybill-primary-soft);
+	color: var(--reybill-interactive-fg);
+}
+
+.frappe-menu .dropdown-menu-item:is(.selected, .active) > a,
+.frappe-menu .dropdown-menu-item > a[aria-current="page"] {
+	color: var(--reybill-interactive-fg);
+}
+
+/* Scope native primary/focus tokens to primary buttons, never global --primary. */
+.btn.btn-primary:not(.btn-danger, .btn-warning, .btn-success, .btn-info) {
+	--btn-primary: var(--reybill-primary);
+	--focus-default: 0px 0px 0px 2px var(--reybill-focus-color);
+	background-color: var(--reybill-primary);
+	border-color: var(--reybill-primary);
+	color: #ffffff;
+}
+
+.btn.btn-primary:not(.btn-danger, .btn-warning, .btn-success, .btn-info):not(:disabled):not(
+		.disabled
+	):hover {
+	background-color: var(--reybill-primary-hover);
+	border-color: var(--reybill-primary-hover);
+	color: #ffffff;
+}
+
+.btn.btn-primary:not(.btn-danger, .btn-warning, .btn-success, .btn-info):not(:disabled):not(
+		.disabled
+	):active {
+	/* Native Frappe pressed colors are !important; retain only color precedence. */
+	background-color: var(--reybill-primary-active) !important;
+	border-color: var(--reybill-primary-active);
+	color: #ffffff !important;
+}
+
+.btn.btn-primary:not(.btn-danger, .btn-warning, .btn-success, .btn-info):focus-visible {
+	box-shadow: var(--focus-default) !important;
+}
+
+/* Native New Email: unique timeline secondary action containing the Add icon.
+   Match stable classes/sprite identity, never translated label text. */
+.new-timeline .timeline-actions .action-btn.btn-secondary:has(use[href="#es-line-add"]) {
+	--icon-stroke: var(--reybill-interactive-fg);
+	--focus-default: 0px 0px 0px 2px var(--reybill-focus-color);
+	background-color: var(--reybill-primary-soft);
+	border-color: var(--reybill-primary-border);
+	color: var(--reybill-interactive-fg);
+}
+
+.new-timeline .timeline-actions .action-btn.btn-secondary:has(use[href="#es-line-add"]):hover {
+	background-color: var(--reybill-primary-border);
+	color: var(--reybill-interactive-hover);
+}
+
+.new-timeline .timeline-actions .action-btn.btn-secondary:has(use[href="#es-line-add"]):active {
+	background-color: var(--reybill-secondary-active) !important;
+	color: var(--reybill-interactive-active) !important;
+}
+
+/* Recolor only Assign/Attachments/Share label and Add icons, not every sidebar icon. */
+.form-sidebar :is(.form-assignments, .form-attachments, .form-shared) .form-sidebar-items {
+	color: var(--reybill-text-secondary);
+}
+
+.form-sidebar :is(.form-assignments, .form-attachments, .form-shared) .form-sidebar-label {
+	color: var(--reybill-text-secondary);
+}
+
+.form-sidebar :is(.form-assignments, .form-attachments, .form-shared) .form-sidebar-label > .icon,
+.form-sidebar
+	.form-sidebar-items
+	:is(.add-assignment-btn, .add-attachment-btn, .share-doc-btn)
+	> :is(.icon, .es-icon) {
+	--icon-stroke: var(--reybill-interactive-fg);
+	stroke: var(--reybill-interactive-fg);
+}
+
+.form-sidebar .like-action:hover .like-icon,
+.form-sidebar .liked .like-icon,
+.form-sidebar .liked .like-icon use {
+	--icon-stroke: var(--reybill-interactive-fg);
+	fill: var(--reybill-interactive-fg);
+}
+
+/* Regular form focus: preserve errors, disabled/read-only controls and the
+   separate native inset/border-only treatments in grid/DataTable editors. */
+.frappe-control:not(.has-error)
+	.form-control:not(
+		.is-invalid,
+		.invalid,
+		[aria-invalid="true"],
+		:disabled,
+		[readonly],
+		.has-error .form-control,
+		.editable-row .form-control,
+		.datatable .form-control
+	):focus {
+	border-color: var(--reybill-control-accent);
+	box-shadow: 0px 0px 0px 2px var(--reybill-focus-color);
+}
+
+/* Keep the native checkmark URL and solid-color layer's existing stop geometry. */
+.frappe-control input[type="checkbox"]:checked:not(:disabled):not(.disabled-selected) {
+	--checkbox-gradient: linear-gradient(
+		180deg,
+		var(--reybill-control-accent) -124.51%,
+		var(--reybill-control-accent) 100%
+	);
+	background-color: var(--reybill-control-accent);
+}
+
+.frappe-control input[type="radio"]:checked:not(:disabled)::before,
+.switch input:checked:not(:disabled) + .slider {
+	background-color: var(--reybill-control-accent);
+}
+
+.frappe-control input[type="checkbox"]:not(:disabled):focus {
+	--checkbox-focus-shadow: 0px 0px 0px 2px var(--reybill-focus-color);
+}
+
+.switch input:focus + .slider {
+	--focus-default: 0px 0px 0px 2px var(--reybill-focus-color);
+}
+
+/* Recolor the existing active tab and its native underline; add no new indicator. */
+.form-tabs-list .form-tabs .nav-item .nav-link.active {
+	color: var(--reybill-interactive-fg);
+	border-bottom-color: var(--reybill-interactive-fg);
+}
+
+/* Second pass: native form/grid focus colors, with no new ring geometry. */
+.form-grid
+	.editable-row
+	.frappe-control:not(.has-error)
+	.form-control:not(.is-invalid, .invalid, [aria-invalid="true"], :disabled, [readonly]):focus {
+	border-color: var(--reybill-control-accent);
+	box-shadow: inset 0px 0px 0px 2px var(--reybill-focus-color);
+}
+
+.form-grid:not(.error) .grid-static-col:not(.invalid, .error):focus-visible {
+	/* The native one-pixel focus border is !important. Change its color only. */
+	border-color: var(--reybill-control-accent) !important;
+}
+
+.form-grid .grid-body button.col:focus-visible {
+	outline-color: var(--reybill-control-accent);
+}
+
+.datatable .dt-cell--focus .dt-cell__content,
+.datatable .dt-cell__edit:not(:has(.has-error, .is-invalid, .invalid, [aria-invalid="true"])) {
+	border-color: var(--reybill-control-accent);
+}
+
+.datatable .dt-row-filter .dt-filter.dt-input {
+	--focus-default: 0px 0px 0px 2px var(--reybill-focus-color);
+}
+
+/* Child-row tabs use a more specific native rule than regular form tabs.
+   Preserve each component's own underline width and inactive states. */
+.grid-row-open .form-in-grid .form-tabs-list .form-tabs .nav-item .nav-link.active {
+	color: var(--reybill-interactive-fg);
+	border-bottom-color: var(--reybill-interactive-fg);
+}
+
+.settings-dialog-tab-item.active {
+	--surface-selected: var(--reybill-primary-soft);
+}
+
+.settings-dialog-tab-item.active .settings-dialog-tab-label,
+.settings-dialog-tab-item.active .settings-dialog-tab-icon {
+	--icon-stroke: var(--reybill-interactive-fg);
+	color: var(--reybill-interactive-fg);
+}
+
+/* Autocomplete and multiselect use their existing ARIA/class selection states.
+   Unselected rows, hover surfaces, descriptions and semantic colors stay native. */
+.awesomplete > [role="listbox"] > [aria-selected="true"]:not([aria-disabled="true"]),
+.multiselect-list
+	.selectable-item:is(.selected, .highlighted):not(.disabled, [aria-disabled="true"]) {
+	--icon-stroke: var(--reybill-interactive-fg);
+	background-color: var(--reybill-primary-soft);
+	color: var(--reybill-interactive-fg);
+}
+
+.awesomplete > [role="listbox"] > [aria-selected="true"]:not([aria-disabled="true"]) .link-option {
+	color: var(--reybill-interactive-fg);
+}
+
+/* List selection follows native checkboxes; keyboard focus uses native :focus.
+   Keep labels/statuses neutral and reuse the native hover/border/shadow token. */
+.frappe-list .list-row-container:has(.list-row-checkbox:checked),
+.frappe-list .list-row-container:focus {
+	--highlight-color: var(--reybill-primary-soft);
+}
+
+.frappe-list .list-row-container:has(.list-row-checkbox:checked),
+.frappe-list .list-row-container:has(.list-row-checkbox:checked) .level-right,
+.frappe-list .list-row-container:focus .level-right {
+	background-color: var(--reybill-primary-soft);
+}
+
+/* Child-grid selection follows the existing row checkbox. Sticky cells keep
+   their native positions; invalid/error cell fills remain untouched. */
+.form-grid .grid-body .data-row:has(.grid-row-check:checked),
+.form-grid
+	.grid-body
+	.data-row:has(.grid-row-check:checked)
+	> :is(.row-check, .row-index, .col:last-child):not(.invalid, .error):not(
+		:has(.has-error, .is-invalid, .invalid, [aria-invalid="true"])
+	) {
+	background-color: var(--reybill-primary-soft);
+}
+
+/* Native DataTable checked-row/range-selection token; headers remain native. */
+.datatable {
+	--dt-selection-highlight-color: var(--reybill-primary-soft);
+}
+
+.datatable .dt-cell--highlight:not(.dt-cell--header),
+.datatable .dt-cell--dragging:not(.dt-cell--header) {
+	background-color: var(--reybill-primary-soft);
+}
+
+.frappe-list .list-row-checkbox:checked:not(:disabled),
+.form-grid .grid-row-check:checked:not(:disabled),
+.datatable .dt-cell--col-0 input[type="checkbox"]:checked:not(:disabled) {
+	--checkbox-gradient: linear-gradient(
+		180deg,
+		var(--reybill-control-accent) -124.51%,
+		var(--reybill-control-accent) 100%
+	);
+	background-color: var(--reybill-control-accent);
+}
+
+/* Modal primary actions already inherit the locked primary-button rules.
+   Cancel/neutral actions retain native fills; tint only their existing ring. */
+.modal
+	.modal-footer
+	:is(.btn-secondary, .btn-default, .btn-ghost):not(
+		:disabled,
+		.disabled,
+		.btn-danger,
+		.btn-warning,
+		.btn-success,
+		.btn-info
+	),
+.page-actions
+	:is(.btn-secondary, .btn-default, .btn-ghost):not(
+		:disabled,
+		.disabled,
+		.btn-danger,
+		.btn-warning,
+		.btn-success,
+		.btn-info
+	) {
+	--focus-default: 0px 0px 0px 2px var(--reybill-focus-color);
+}
+
+/* ==========================================================
+   ReyBill Login / Authentication — native /login surface only
+   Preserve native white surfaces, logo, geometry and focus-shadow behavior.
+   ========================================================== */
+body.reybill-auth[data-path="login"] {
+	--reybill-login-border: #d0d5dd;
+	--reybill-login-secondary-bg: #f9fafb;
+	--reybill-login-secondary-border: #e4e7ec;
+	--reybill-login-icon: #98a2b3;
+}
+
+body.reybill-auth[data-path="login"] :is(.for-login, .for-email-login) .page-card-head h4 {
+	color: var(--reybill-text);
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.page-card-head
+	.page-card-subtitle {
+	color: var(--reybill-text-secondary);
+}
+
+body.reybill-auth[data-path="login"] :is(.for-login, .for-email-login) .form-label {
+	color: var(--reybill-text-muted);
+}
+
+/* Exclude the native field/page validation states so red borders remain red. */
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.page-card-body:not(.invalid)
+	.form-group:not(.invalid)
+	.form-control:not(.is-invalid, .invalid, [aria-invalid="true"], :disabled, [readonly]) {
+	border-color: var(--reybill-login-border);
+	color: var(--reybill-text);
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.page-card-body
+	.form-control::placeholder {
+	color: var(--reybill-text-muted);
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.page-card-body:not(.invalid)
+	.form-group:not(.invalid)
+	.form-control:not(.is-invalid, .invalid, [aria-invalid="true"], :disabled, [readonly]):focus {
+	border-color: var(--reybill-control-accent);
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.page-card-body
+	:is(.field-icon, .toggle-password) {
+	fill: var(--reybill-login-icon);
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.forgot-password-message
+	a[href="#forgot"] {
+	color: var(--reybill-interactive-fg);
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.forgot-password-message
+	a[href="#forgot"]:hover {
+	color: var(--reybill-interactive-hover);
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.forgot-password-message
+	a[href="#forgot"]:active {
+	color: var(--reybill-interactive-active);
+}
+
+/* Continue retains native disabled behavior; LDAP/provider actions stay native. */
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.page-card-actions
+	> .btn-login:not(.btn-ldap-login, :disabled, .disabled, [aria-disabled="true"]) {
+	background-color: var(--reybill-primary);
+	border-color: var(--reybill-primary);
+	color: #ffffff;
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.page-card-actions
+	> .btn-login:not(.btn-ldap-login, :disabled, .disabled, [aria-disabled="true"]):is(
+		:hover,
+		:focus
+	) {
+	background-color: var(--reybill-primary-hover);
+	border-color: var(--reybill-primary-hover);
+	color: #ffffff;
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.page-card-actions
+	> .btn-login:not(.btn-ldap-login, :disabled, .disabled, [aria-disabled="true"]):active {
+	background-color: var(--reybill-primary-active) !important;
+	border-color: var(--reybill-primary-active);
+	color: #ffffff !important;
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.page-card-actions
+	> .btn-login-option.btn-login-with-email-link:not(.disabled, [aria-disabled="true"]) {
+	background-color: var(--reybill-login-secondary-bg);
+	border-color: var(--reybill-login-secondary-border);
+	color: var(--reybill-text);
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.page-card-actions
+	> .btn-login-option.btn-login-with-email-link:not(.disabled, [aria-disabled="true"]):hover {
+	background-color: var(--reybill-primary-soft);
+	border-color: var(--reybill-primary-border);
+	color: var(--reybill-interactive-fg);
+}
+
+body.reybill-auth[data-path="login"]
+	:is(.for-login, .for-email-login)
+	.page-card-actions
+	> .btn-login-option.btn-login-with-email-link:not(.disabled, [aria-disabled="true"]):active {
+	background-color: var(--reybill-primary-border) !important;
+	border-color: var(--reybill-primary-border);
+	color: var(--reybill-interactive-hover) !important;
+}
