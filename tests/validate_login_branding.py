@@ -265,10 +265,22 @@ def validate(args):
 		desk_page.locator(".desktop-avatar").click()
 		desk_page.locator(".context-menu:visible").get_by_text("About ReyBill", exact=True).click()
 		about = desk_page.locator(".reybill-about-dialog:visible")
-		assert f"ReyBill Core {__version__}" in about.inner_text()
+		metadata = desk_page.evaluate("frappe.boot.reybill_branding.about")
+		unavailable = desk_page.evaluate("__('Version unavailable')")
+		product_version = f"v{metadata['product_version']}" if metadata["product_version"] else unavailable
+		assert f"ReyBill {product_version}" in about.inner_text()
+		assert about.locator(".about-app-name").all_text_contents() == [
+			app["title"] for app in metadata["applications"]
+		]
+		assert about.locator(".about-app-version").all_text_contents() == [
+			f"v{app['version']}" if app["version"] else unavailable for app in metadata["applications"]
+		]
+		assert "© ReyBill Technologies Ltd" in about.inner_text()
 		assert not re.search(r"Frappe|ERPNext", about.inner_text())
 		about.screenshot(path=str(output / f"about-v{__version__}.png"))
-		results["About"] = f"ReyBill Core {__version__}; no visible vendor branding"
+		results["About"] = (
+			f"ReyBill {product_version}; current-site app inventory; no visible vendor branding"
+		)
 		assert desk_page.evaluate("frappe.boot.versions.reybill_core") == __version__
 		desk.close()
 

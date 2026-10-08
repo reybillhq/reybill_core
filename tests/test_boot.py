@@ -1,5 +1,6 @@
 import unittest
 from copy import deepcopy
+from unittest.mock import patch
 
 from reybill_core import __version__
 from reybill_core.boot import extend_bootinfo, update_desk_context
@@ -7,6 +8,19 @@ from reybill_core.branding import ABOUT_ACTION, DESKTOP_LABELS, LOGOS, MENU_LABE
 
 
 class BootNamingTest(unittest.TestCase):
+	def setUp(self):
+		self.about = {
+			"product_version": "16.37.0",
+			"applications": [
+				{"title": "ReyBill Core", "version": __version__},
+				{"title": "ReyBill Farm", "version": "0.0.3"},
+			],
+			"company_name": "ReyBill Technologies Ltd",
+		}
+		patcher = patch("reybill_core.boot.get_about_data", return_value=self.about)
+		patcher.start()
+		self.addCleanup(patcher.stop)
+
 	def test_presentation_preserves_source_and_navigation(self):
 		messages = {"Unrelated": "Existing translation", "Framework": "Existing framework label"}
 		navbar = {
@@ -59,8 +73,8 @@ class BootNamingTest(unittest.TestCase):
 		self.assertIs(boot["versions"], versions)
 		self.assertIs(boot["app_data"], apps)
 		self.assertEqual(apps[0]["app_title"], "ERPNext")
-		self.assertEqual(boot["reybill_branding"]["about"]["applications"], ["ReyBill", "ReyBill Core"])
-		self.assertEqual(boot["reybill_branding"]["about"]["version"], __version__)
+		self.assertEqual(boot["reybill_branding"]["about"]["applications"], self.about["applications"])
+		self.assertEqual(boot["reybill_branding"]["about"]["product_version"], "16.37.0")
 		self.assertEqual(boot["reybill_branding"]["about"]["logos"], LOGOS)
 
 		first = deepcopy(boot)
@@ -79,7 +93,7 @@ class BootNamingTest(unittest.TestCase):
 		boot["navbar_settings"] = NavbarDocument()
 		extend_bootinfo(boot)
 		self.assertEqual(boot["navbar_settings"]["help_dropdown"][0]["action"], "native()")
-		self.assertEqual(boot["reybill_branding"]["about"]["applications"], [])
+		self.assertEqual(boot["reybill_branding"]["about"]["applications"], self.about["applications"])
 
 	def test_final_desk_context_after_native_navbar_refresh(self):
 		original_boot = {

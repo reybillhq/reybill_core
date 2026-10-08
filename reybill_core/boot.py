@@ -2,10 +2,9 @@
 
 from copy import deepcopy
 
-from reybill_core import __version__
+from reybill_core.about import get_about_data
 from reybill_core.branding import (
 	ABOUT_ACTION,
-	APPLICATION_LABELS,
 	DESKTOP_LABELS,
 	LOGOS,
 	MENU_LABELS,
@@ -26,11 +25,8 @@ def extend_bootinfo(bootinfo):
 		"navbar_logos": dict(LOGOS),
 		"module_icons": dict(MODULE_ICONS),
 		"about": {
-			"version": __version__,
+			**get_about_data(),
 			"logos": dict(LOGOS),
-			"applications": [
-				label for app, label in APPLICATION_LABELS.items() if app in bootinfo.get("versions", {})
-			],
 		},
 	}
 

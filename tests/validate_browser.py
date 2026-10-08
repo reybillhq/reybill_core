@@ -54,16 +54,26 @@ def validate(args):
 			dialog = page.locator(".reybill-about-dialog:visible")
 			dialog.wait_for()
 			text = dialog.inner_text()
+			metadata = page.evaluate("frappe.boot.reybill_branding.about")
+			unavailable = page.evaluate("__('Version unavailable')")
+			product_version = (
+				f"v{metadata['product_version']}" if metadata["product_version"] else unavailable
+			)
 			assert not re.search(r"Frappe|ERPNext|frappe:|erpnext:", text), text
 			for phrase in (
 				"About ReyBill",
 				"Business management software powered by ReyBill.",
-				f"ReyBill Core {__version__}",
+				f"ReyBill {product_version}",
 				page.evaluate("__('Installed Applications').toUpperCase()"),
-				"© ReyBill Ltd",
+				"© ReyBill Technologies Ltd",
 			):
 				assert phrase in text, text
-			assert dialog.locator(".about-app-name").all_text_contents() == ["ReyBill", "ReyBill Core"]
+			assert dialog.locator(".about-app-name").all_text_contents() == [
+				app["title"] for app in metadata["applications"]
+			]
+			assert dialog.locator(".about-app-version").all_text_contents() == [
+				f"v{app['version']}" if app["version"] else unavailable for app in metadata["applications"]
+			]
 			logo = dialog.locator(".reybill-about-logo")
 			assert logo.get_attribute("src") == LOGOS["light"]
 			assert logo.get_attribute("alt") == "ReyBill"
