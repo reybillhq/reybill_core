@@ -25,6 +25,7 @@ SUPPORT_URL = "https://reybill.com"
 ABOUT_ACTION = "reybill.about.show()"
 PRODUCT_NAME = "ReyBill"
 LOGIN_TITLE = "Login - ReyBill"
+ABOUT_COMPANY_NAME = "ReyBill Technologies Ltd"
 
 LOGOS = {
 	"light": branding_asset_url("images/branding/reybill-logo-black.svg"),
@@ -101,9 +102,6 @@ SIDEBAR_LABELS = {
 	"Frappe Framework": "ReyBill Framework",
 	"Frappe": "ReyBill",
 }
-
-# Display names only; the installed app/version map remains intact.
-APPLICATION_LABELS = {"erpnext": "ReyBill", "reybill_core": "ReyBill Core"}
 
 DESKTOP_LABELS = {
 	"Framework": "ReyBill Work",

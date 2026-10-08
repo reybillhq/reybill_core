@@ -5,6 +5,8 @@ reybill.about.show = function () {
 	const branding = frappe.boot.reybill_branding;
 	const about = branding.about;
 	const escape = frappe.utils.escape_html;
+	const version_text = (version) =>
+		version ? `v${escape(version)}` : escape(__("Version unavailable"));
 	if (!reybill.about.dialog) {
 		const dialog = new frappe.ui.Dialog({ title: __("About ReyBill") });
 		$(dialog.wrapper).addClass("about-dialog reybill-about-dialog");
@@ -31,7 +33,7 @@ reybill.about.show = function () {
 				<div class="about-info-row">
 					<div class="about-info-content">
 						<div class="about-info-title">${__("Version")}</div>
-						<div class="about-info-sub">ReyBill Core ${escape(about.version)}</div>
+						<div class="about-info-sub">ReyBill ${version_text(about.product_version)}</div>
 					</div>
 				</div>
 			</div>
@@ -41,16 +43,18 @@ reybill.about.show = function () {
 			<div class="about-app-list">
 				${about.applications
 					.map(
-						(label) =>
-							`<div class="about-app-row"><div class="about-app-name">${escape(
-								label
-							)}</div></div>`
+						(app) =>
+							`<div class="about-app-row"><div class="about-app-info">
+								<div class="about-app-name">${escape(app.title)}</div>
+							</div><div class="about-app-version">${version_text(app.version)}</div></div>`
 					)
 					.join("")}
 			</div>
 		</div>
 	`);
-	$(dialog.footer).removeClass("hide").html('<div class="about-footer">© ReyBill Ltd</div>');
+	$(dialog.footer)
+		.removeClass("hide")
+		.html(`<div class="about-footer">© ${escape(about.company_name)}</div>`);
 	dialog.show();
 	return false;
 };

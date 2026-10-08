@@ -22,7 +22,7 @@ app_include_css = [
 ]
 jinja = {"methods": ["reybill_core.website.get_splash_config"]}
 app_include_js = [
-	"/assets/reybill_core/js/about.js",
+	branding_asset_url("js/about.js"),
 	"/assets/reybill_core/js/desk_branding.js",
 	"/assets/reybill_core/js/desktop_logo.js",
 	branding_asset_url("js/module_icons.js"),

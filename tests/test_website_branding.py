@@ -45,8 +45,9 @@ class WebsiteBrandingTest(unittest.TestCase):
 			self.assertEqual(write.call_count, 2)
 			clear.assert_called_once()
 
+	@patch("reybill_core.boot.get_about_data", return_value={"applications": [], "product_version": None})
 	@patch("reybill_core.website._", side_effect=lambda value: value)
-	def test_context_preserves_authentication_navigation_and_document_titles(self, _translate):
+	def test_context_preserves_authentication_navigation_and_document_titles(self, _translate, _about_data):
 		for template in ("www/login.html", "www/update-password.html", "www/complete_signup.html"):
 			context = {
 				"template": template,
