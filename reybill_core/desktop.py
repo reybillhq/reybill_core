@@ -4,7 +4,16 @@ import json
 
 import frappe
 
-from reybill_core.branding import DESKTOP_ORDER, REYBILL_DESKTOP_ICON
+from reybill_core.branding import DESKTOP_ORDER, EXCLUDED_DESKTOP_LAUNCHERS, REYBILL_DESKTOP_ICON
+
+
+def filter_desktop_launchers(icons):
+	"""Exclude only the verified redundant launcher from a presentation list."""
+	filtered = [
+		icon for icon in icons if (icon.get("app"), icon.get("name")) not in EXCLUDED_DESKTOP_LAUNCHERS
+	]
+	# Do not mutate cached rows, saved layouts or an unrelated caller's list.
+	return filtered if len(filtered) != len(icons) else icons
 
 
 def order_layout(icons):
