@@ -46,6 +46,8 @@ WEBSITE_BRANDING = {
 SYSTEM_BRANDING = {"app_name": PRODUCT_NAME}
 
 # Native Desktop Icon names, never customer-facing translations or routes.
+EXCLUDED_DESKTOP_LAUNCHERS = (("reybill_core", "ReyBill Core"),)
+
 DESKTOP_ORDER = (
 	"Framework",
 	"Home",

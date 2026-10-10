@@ -6,19 +6,26 @@ from reybill_core.about import get_about_data
 from reybill_core.branding import (
 	ABOUT_ACTION,
 	DESKTOP_LABELS,
+	EXCLUDED_DESKTOP_LAUNCHERS,
 	LOGOS,
 	MENU_LABELS,
 	MODULE_ICONS,
 	SIDEBAR_LABELS,
 	SUPPORT_URL,
 )
+from reybill_core.desktop import filter_desktop_launchers
 
 
 def extend_bootinfo(bootinfo):
+	if "desktop_icons" in bootinfo:
+		bootinfo["desktop_icons"] = filter_desktop_launchers(bootinfo["desktop_icons"])
 	# Frappe's captions use __(), while routing continues to use the original labels.
 	# Copy the dictionary: translation data may be shared with the framework cache.
 	bootinfo["__messages"] = {**bootinfo.get("__messages", {}), **DESKTOP_LABELS}
 	bootinfo["reybill_branding"] = {
+		"excluded_desktop_launchers": [
+			{"app": app, "name": name} for app, name in EXCLUDED_DESKTOP_LAUNCHERS
+		],
 		"menu_labels": dict(MENU_LABELS),
 		"support_url": SUPPORT_URL,
 		"sidebar_labels": dict(SIDEBAR_LABELS),
