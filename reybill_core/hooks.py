@@ -10,6 +10,8 @@ app_license = "mit"
 # Presentation only: keep standard records and navigation identifiers unchanged.
 extend_bootinfo = "reybill_core.boot.extend_bootinfo"
 page_js = {"desktop": "public/js/desktop_naming.js"}
+# Native wizard awaits these assets before language/user loading and construction.
+setup_wizard_requires = "/assets/reybill_core/js/setup_wizard_branding.js"
 # v16 refreshes Navbar Settings after extend_bootinfo; adapt the final Desk context.
 update_website_context = "reybill_core.website.update_website_context"
 after_install = "reybill_core.setup.apply_branding"
