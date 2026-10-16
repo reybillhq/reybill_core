@@ -1,6 +1,4 @@
-"""Canonical ordering through native Desktop Icon and Desktop Layout data."""
-
-import json
+"""Canonical global Desktop defaults; user-owned layouts remain native and untouched."""
 
 import frappe
 
@@ -16,20 +14,8 @@ def filter_desktop_launchers(icons):
 	return filtered if len(filtered) != len(icons) else icons
 
 
-def order_layout(icons):
-	"""Change only approved indices and the removed ERPNext/ReyBill artwork."""
-	ranks = {name: index for index, name in enumerate(DESKTOP_ORDER)}
-	for icon in icons:
-		name = icon.get("name")
-		if name in ranks:
-			icon["idx"] = ranks[name]
-		if name == "ERPNext":
-			icon["logo_url"] = REYBILL_DESKTOP_ICON
-	return icons
-
-
 def apply_desktop_branding():
-	"""Idempotent settings, reapplied after native standard-record import."""
+	"""Reapply global defaults after standard import, without reading saved layouts."""
 	changed = False
 	for index, name in enumerate(DESKTOP_ORDER):
 		if not frappe.db.exists("Desktop Icon", name):
@@ -42,18 +28,9 @@ def apply_desktop_branding():
 		changed |= _set_icon_fields(name, values)
 	if frappe.db.exists("Desktop Icon", "ERPNext"):
 		changed |= _set_icon_fields("ERPNext", {"logo_url": REYBILL_DESKTOP_ICON})
-	for row in frappe.get_all("Desktop Layout", fields=["name", "layout"]):
-		if not row.layout:
-			continue
-		icons = json.loads(row.layout)
-		if not isinstance(icons, list):
-			# Native empty/default layouts may be stored as {} rather than [].
-			continue
-		before = json.dumps(icons, sort_keys=True)
-		order_layout(icons)
-		if json.dumps(icons, sort_keys=True) != before:
-			frappe.get_doc("Desktop Layout", row.name).db_set("layout", json.dumps(icons))
-			changed = True
+	# Native Desktop uses these defaults when no saved layout is selected.
+	# DesktopPage.sync_layout() selects saved JSON otherwise, including custom idx,
+	# folders and removed states. Never canonicalize or reserialize that user data.
 	if changed:
 		frappe.cache.delete_key("desktop_icons")
 		frappe.clear_cache()

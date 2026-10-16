@@ -85,13 +85,17 @@ reload and normal logout/login. Exercise Customize without clicking Reset.
 CORE-001's exclusion must preserve the persisted source layout while filtering
 the exact redundant runtime launcher; unrelated hidden/removed items remain.
 
-Important pre-existing risk: Core's `setup.apply_branding` after_migrate hook calls
-`apply_desktop_branding`, which can rewrite saved Desktop Layout indices/artwork.
-That hook predates CORE-001/002 and is not changed here. Do not assume an update
-that includes migration preserves customization. If the intended deployment runs
-migrate, test that exact procedure on a disposable customized site; any unexpected
-layout change is a release blocker requiring separate approval for a fix.
-Never use the development site's real saved layouts for this experiment.
+The risk identified during CORE-007 is confirmed in committed base `29f8369`:
+`setup.apply_branding` calls `apply_desktop_branding`, which rewrites saved layout
+indices/artwork. A subsequent local correction removes that saved-layout loop
+and keeps canonical defaults on global Desktop Icon records only. Finalization
+authorizes this correction's development commit/push, not stable publication.
+See [FINAL_ACCEPTANCE.md](FINAL_ACCEPTANCE.md) for Site A/B/C procedures.
+Pin the exact migration-fix commit from the handoff, not base 29f8369 alone,
+for the preservation gate. If deployment includes migrate, test that exact
+procedure only on a disposable customized site and compare persisted JSON.
+Any unexpected change remains a release blocker. Never use the development
+site's real saved layouts for this experiment.
 
 Provide a PASS/FAIL/PENDING table, both language recordings/screenshots, console/
 asset errors, installed commit/version details and before/after layout evidence.
@@ -124,6 +128,8 @@ from the verified clean stable base, promote only these patches, in this order:
 2. `fc5ab92d6dc1de4f3904bd3ac4417850145c89d9` — CORE-001 and associated tests/docs.
 3. Exact reviewed CORE-002 handoff commit — wizard hook, adapter, translation,
    durable tests, offline validator and acceptance/audit documentation.
+4. Reviewed migration-safety correction and its eight regression scenarios,
+   identified by the exact development commit in the acceptance handoff.
 
 Use normal `git cherry-pick -x` commits; stop for unexpected conflicts or changed
 remote scope rather than resolving unrelated changes. No force push or history
